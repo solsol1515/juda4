@@ -48,15 +48,16 @@
       <td ><input type="text" name="userId"></td>
     </tr>
     
-	<tr> <td>  패스워드</td>
-      <td> <input type="password" name="userPass"></td>
+	<tr>
+		<td>  패스워드</td>
+    	<td> <input type="password" name="userPass"></td>
     </tr>
+    
   <tr>
   <td colspan=2>
     <input type="button" name="Submit" id="Submit" value="로그인">
     <input type="button"  value="회원가입" onclick="location.href='userJoin.do'">
     <input type="reset" value="취소">
-	
 </td>
  </tr>
   </table>
