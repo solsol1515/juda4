@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+<!-- 섹션 크기 -->
+   
+<!-- 생년월일 -->
+#bir_yy,#bir_mm,#bir_dd{
+	width:160px;
+	display:table-cell;
+}
+#bir_mm+#bir_dd, #bir_yy+#bir_mm{
+	padding-left:10px;
+}
+
+<!-- 입력 공간의 색 -->
+.bg-light input {
+	background-color:#918F8F;
+}

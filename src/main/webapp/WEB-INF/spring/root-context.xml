@@ -11,9 +11,9 @@
 	<!-- ##### oracle ##### -->
 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
-		<property name="username" value="scott"></property>
-		<property name="password" value="tiger"></property>
+		<property name="url" value="jdbc:oracle:thin:@192.168.0.57:1521:xe"></property>
+		<property name="username" value="juda"></property>
+		<property name="password" value="juda"></property>
 	</bean>
 
 	<!-- ##### mariadb ##### -->
@@ -30,7 +30,11 @@
 	  <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 	    <property name="typeAliases">
 	  	<list>
-	  		<value>com.javassem.domain.MemberVO</value>
+	  		<value>middleProject.domain.GoodsVO</value>
+	  		<value>middleProject.domain.GoodsTypeVO</value>
+	  		<value>middleProject.domain.MemberVO</value>
+	  		<value>middleProject.domain.LoginVO</value>
+	  		
 	  	</list>
 	  </property>
 	 </bean>
@@ -41,5 +45,3 @@
  
    		
 </beans>
-
-
