@@ -19,7 +19,7 @@ public class MemberVO {
 	private String p_num2;
 	private String p_num3;
 	
-	private String p_num;
+	private String tel;
 	
 	// 생년월일
 	private String yy;

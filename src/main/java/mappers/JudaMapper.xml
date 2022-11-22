@@ -25,4 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE			member_id = #{member_id} AND password = #{password}
 	</select>
 
+	<select id="getGoods" parameterType="String" resultType="GoodsVO">
+      SELECT * FROM Goods
+      WHERE goods_id = #{goods_id}
+   </select>
+
 </mapper>

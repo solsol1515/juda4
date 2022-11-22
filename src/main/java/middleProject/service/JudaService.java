@@ -18,10 +18,14 @@ public interface JudaService {
 
 	// 로그인
 	public Integer selectAllLogin (LoginVO vo);
+	Integer selectAllLogin(LoginVO vo, HttpSession session);
+	
 	// 로그아웃?
 	public void logout (HttpSession session);
 	
-	Integer selectAllLogin(LoginVO vo, HttpSession session);
-
-	boolean loginCheck(LoginVO vo, HttpSession session); 
+	// 로그인 체크(아이디 비밀번호 일치 여부 확인)
+	boolean loginCheck(LoginVO vo, HttpSession session);
+	
+	// 상세페이지 (수량 증감)
+	public GoodsVO getGoods(String goods_id);
 }

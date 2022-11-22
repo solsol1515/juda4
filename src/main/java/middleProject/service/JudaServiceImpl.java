@@ -34,7 +34,7 @@ public class JudaServiceImpl implements JudaService {
 		return judaDAO.selectAllLogin(vo);
 	} // end of selectAllLogin()
 	
-	
+	// 로그인???
 	public Integer selectAllLogin(LoginVO vo, HttpSession session) {
 		Integer name = judaDAO.selectAllLogin(vo);
 		if(name != null) { // 세션 변수 저장
@@ -42,6 +42,11 @@ public class JudaServiceImpl implements JudaService {
 			session.setAttribute("name", name);
 		}
 		return name;
+	}
+
+	// 상세페이지 (수량 증감)
+	public GoodsVO getGoods(String goods_id) {
+		return judaDAO.getGoods(goods_id);
 	}
 
 	@Override
@@ -56,5 +61,5 @@ public class JudaServiceImpl implements JudaService {
 		return false;
 	}
 	
-
+	
 }

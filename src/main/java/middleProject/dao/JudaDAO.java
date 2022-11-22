@@ -16,8 +16,11 @@ public interface JudaDAO {
 	Integer insertMember(MemberVO vo);
 	
 	// 로그인
-		public int selectAllLogin(LoginVO vo) ;
-			LoginVO idCheck(LoginVO vo);
+	int selectAllLogin(LoginVO vo) ;
+	LoginVO idCheck(LoginVO vo);
+
+	// 상세페이지 (수량 증감)		
+	GoodsVO getGoods(String goods_id);
 		
 	
 }

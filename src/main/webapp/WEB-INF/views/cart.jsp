@@ -23,8 +23,8 @@
 		<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="resources/css/tiny-slider.css" rel="stylesheet">
-		<link href="resources/css/style.css" rel="stylesheet">
-		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+		<link href="resources/css/cart.css" rel="stylesheet">
+		<title> cart </title>
 	</head>
 
 	<body>
@@ -32,7 +32,7 @@
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 			<div class="container">
-				<a class="navbar-brand" href="index.do"><img src="resources/images/로고1.png" alt="logo" style="width:100px; height:50px;"></a>
+				<a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo" style="width:200px; height:100px;"></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -95,24 +95,29 @@
                           <td class="product-info">
                           	<input type="checkbox" class="goods-select" />
                             <img src="resources/images/dangamMyoungjak.jpg" alt="Image" class="img-fluid" style="width:200px; height:200px;" />
-                            <span class="h5 text-black">Product 1</span>
+                            <span class="h5 text-black">상품 1</span>
                           </td>
+                          
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
+                              
                               <div class="input-group-prepend">
                                 <button class="btn btn-outline-black decrease" type="button">&minus;</button>
                               </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
+	                            <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+         	                    <div class="input-group-append">
                                 <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
+                              
                             </div>
+                            
                             <div class="option mb-3 d-flex align-items-center quantity-container">
-                            	<button class="btn btn-outline-black" type="button">옵션 변경</button>
+                            	<button class="btn btn-outline-black" type="button" id="ch_option">옵션 변경</button>
                             </div>
+                            
                           </td>
                           <td>20,000원</td>
-                          <td>3,000원 <img src="resources/images/q-mark.png" class="img-fluid" style="width:15px; height:15px;"> <br/> 택배</td>
+                          <td>3,000원 <br/></td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
                         </tr>
         
@@ -122,8 +127,8 @@
                 </form>
               </div>
               
-              <div style="text-align:center">
-              	<button class="btn btn-outline-black btn-sm btn-block">계속 쇼핑하기</button>
+              <div align="center">
+              	<button class="btn btn-outline-black btn-sm btn-block">계속 쇼핑하기</button><br/><br/><br/>
               </div>
               
               <div class="row">
@@ -135,7 +140,7 @@
               				<td>배송비</td>
               				<td rowspan="2">&minus;</td>
               				<td>할인 금액</td>
-              				<td rowspan="2" style="border-right:1px solid black;"></td>
+              				<td rowspan="2" style="border-right:1px solid #cfcac0;"></td>
               				<td rowspan="2"></td>
               				<td rowspan="2">총 주문 금액</td>
               				<td rowspan="2">0원</td>
@@ -158,21 +163,21 @@
 			<div class="container relative">
 	
 				<!-- footer 정보 시작-->
-				<div class="row footer-content">
-					<div class="col-md-3" style="float: none; margin:0 auto;">
-					   <h5>
+				<div class="row footer-content" align="center">
+					<div class="col-md-8" style="float: none; margin:0 auto;">
+					   <h6>
 					      <strong>(주)전통주 프로젝트</strong>
-					   </h5>
-					   <h6>사업자 번호 228-24-23029</h6>
+					   </h6>
+					   <h7>사업자 번호 228-24-23029</h7>
 					   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
 					   <br />
 					   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-					   <h5>
-					      <strong>고객센터</strong>
-					   </h5>
-					   <h6>강원도 춘천시 퇴계로 89</h6>
-					   <h6>전화 1588-8282</h6>
-					   <h6>1:1 문의 바로 가기</h6>
+					   <h7><br/>
+					      <strong><b>고객센터</b></strong>
+					   </h7>
+					   <h7>강원도 춘천시 퇴계로 89</h7>
+					   <h7>전화 1588-8282</h7>
+					   <h7>1:1 문의 바로 가기</h7>
 					</div>
 				</div>
 				<!-- footer 정보 끝 -->

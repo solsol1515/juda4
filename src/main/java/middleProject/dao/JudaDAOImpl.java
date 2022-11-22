@@ -38,5 +38,9 @@ public class JudaDAOImpl implements JudaDAO {
 	public LoginVO idCheck(LoginVO vo) {
 		return null;
 	}
+	// 상세 페이지 (수량 증감)
+	public GoodsVO getGoods(String goods_id) {
+	      return mybatis.selectOne("JudaMap.getGoods", goods_id);
+	   }
 	
 }

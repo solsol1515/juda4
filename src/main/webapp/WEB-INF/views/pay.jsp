@@ -42,7 +42,7 @@
          arial-label="Furni navigation bar">
          <div class="container">
             <a class="navbar-brand" href="index.html"> <img
-               src="resources/images/로고1.png" alt="logo"></a>
+               src="resources/images/로고.png" alt="logo"></a>
 
             <button class="navbar-toggler" type="button"
                data-bs-toggle="collapse" data-bs-target="#navbarsFurni"

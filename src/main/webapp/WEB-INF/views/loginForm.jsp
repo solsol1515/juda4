@@ -21,7 +21,7 @@
 
   <div class="parent clearfix">
     <div class="bg-illustration">
-      <img src="resources/images/로고.png" alt="logo">
+      <img src="resources/images/로고1.png" alt="logo">
 
       <div class="burger-btn">
         <span></span>

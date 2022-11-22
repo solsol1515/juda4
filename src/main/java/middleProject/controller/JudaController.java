@@ -1,7 +1,5 @@
 package middleProject.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import middleProject.domain.GoodsTypeVO;
-import middleProject.domain.GoodsVO;
 import middleProject.domain.LoginVO;
 import middleProject.domain.MemberVO;
 import middleProject.service.JudaService;
@@ -37,7 +34,7 @@ public class JudaController {
 	// 가입하기
 	@RequestMapping("joinSuccess.do")
 	public void insertMember(MemberVO vo, Model m) {
-		vo.setP_num(vo.getP_num1()+"-"+vo.getP_num2()+"-"+vo.getP_num3());
+		vo.setTel(vo.getP_num1()+"-"+vo.getP_num2()+"-"+vo.getP_num3());
 		vo.setBirth(vo.getYy()+"-"+vo.getMm()+"-"+vo.getDd());
 		System.out.println(vo);
 		m.addAttribute("result", judaService.insertMember(vo));
@@ -66,4 +63,10 @@ public class JudaController {
 	 } // end of selectAllLogin()
 	//***********************************************
 	
+	 // 상세 페이지 (수량 증감)
+	 @RequestMapping("sangse.do")
+	   public void getGoods(String goods_id, Model m) {
+	      m.addAttribute("vo", judaService.getGoods(goods_id));
+	   }
+	 
 }

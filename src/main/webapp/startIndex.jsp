@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>취합1(11. 21.)</title>
+<title>취합1 (11. 21.)</title>
 </head>
 <body>
+
 
 <a href="index.do">메인 화면</a><br/>
 <a href="intro.do">소개</a><br/>
