@@ -21,7 +21,7 @@ body {
 	line-height: 28px;
 	color: #7e7567;
 	font-size: 14px;
-	background-color: #d7dacd;
+	background-color: #f2efea;
 }
 
 a {
@@ -101,6 +101,7 @@ a.more {
 		-o-transition: .15s all ease-out;
 		transition: .15s all ease-out;
 	}
+	
 }
 
 .custom-navbar .custom-navbar-nav li a:hover {
@@ -323,20 +324,31 @@ a.more {
 		padding-bottom: 50px;
 		cursor: pointer;
 	}
+	/* [메인] 주간순위 이미지 */
 	.product-section .product-item .product-thumbnail {
 		margin-bottom: 30px;
 		position: relative;
 		top: 0;
-		width: 500px;
-		height: 400px;
+/* 		width: 500px; */
+/* 		height: 400px; */
 		-webkit-transition: .3s all ease;
 		-o-transition: .3s all ease;
 		transition: .3s all ease;
+		vertical-align: middle;
 	}
-	.product-section .product-item h2 {
-		font-weight: 600;
-		font-size: 25px;
+	/* [메인] 주간순위 상품명 */
+	.product-section .product-item h3 {
+		font-weight: 1000;
+		font-size: 16px;
 	}
+	
+	/*[메인] 주간순위 가격 */ /*새로 추가*/
+	.product-section .product-item h3, .product-section .product-item .product-price
+	{
+		color: #2f2f2f;
+		text-decoration: none;
+	}
+
 	.product-section .product-item strong {
 		text-align: center;
 		font-weight: 800 !important;
@@ -380,7 +392,7 @@ a.more {
 		right: 0;
 		position: absolute;
 		content: "";
-		background: #dce5e4;
+		background: #f2efea;
 		height: 0%;
 		z-index: -1;
 		border-radius: 10px;
@@ -400,9 +412,10 @@ a.more {
 	.product-section .product-item:hover:before {
 		height: 70%;
 	}
+	/* [마이페이지] 카테고리 */
 	.why-choose-section {
 		padding: 7rem 0;
-		
+		text-align: center;
 	}
 	.why-choose-section .img-wrap {
 		position: relative;
@@ -426,21 +439,28 @@ a.more {
 	.feature {
 		margin-bottom: 30px;
 	}
+	
+	/* [마이페이지] 카테고리 글씨 */
+	.feature h3 {
+		font-size: 18px;
+		color: #2f2f2f;
+	}
+	
 	.feature .icon {
 		display: inline-block;
 		position: relative;
 		margin-bottom: 20px;
 	}
-	.feature .icon:before {
-		content: "";
-		width: 33px;
-		height: 33px;
-		position: absolute;
-		background: rgba(59, 93, 80, 0.2);
-		border-radius: 50%;
-		right: -8px;
-		bottom: 0;
-	}
+/* 	.feature .icon:before { */
+/* 		content: ""; */
+/* 		width: 33px; */
+/* 		height: 33px; */
+/* 		position: absolute; */
+/* 		background: rgba(59, 93, 80, 0.2); */
+/* 		border-radius: 50%; */
+/* 		right: -8px; */
+/* 		bottom: 0; */
+/* 	} */
 	.feature h3 {
 		font-size: 14px;
 		color: #2f2f2f;
@@ -561,7 +581,7 @@ a.more {
 		content: "";
 		position: absolute;
 		border-radius: 20px;
-		background: #dce5e4;
+		background: #f2efea;
 		width: 98px;
 		height: 98px;
 		top: 50%;
@@ -614,12 +634,14 @@ a.more {
 		z-index: 99;
 		width: 100%;
 		display: none;
+		
 	}
 	@media ( min-width : 768px) {
 		.testimonial-slider-wrap #testimonial-nav {
 			display: block;
 		}
 	}
+	/* [메인] bx slider button */
 	.testimonial-slider-wrap #testimonial-nav>span {
 		cursor: pointer;
 		position: absolute;
@@ -680,7 +702,7 @@ a.more {
 		-webkit-transition: .3s all ease;
 		-o-transition: .3s all ease;
 		transition: .3s all ease;
-		background-color: #d6d6d6;
+		background-color: #f2efea;
 	}
 	.testimonial-slider-wrap .tns-nav button:hover:before,
 		.testimonial-slider-wrap .tns-nav button.tns-nav-active:before {
@@ -727,7 +749,7 @@ a.more {
 	}
 	.footer-section {
 		padding: 80px 0;
-		background: #ffffff;
+		background: #f2efea;
 	}
 	.footer-section .relative {
 		position: relative;
@@ -825,7 +847,7 @@ a.more {
 		text-align: center;
 		line-height: 40px;
 		display: inline-block;
-		background: #dce5e4;
+		background: #f2efea;
 		color: #f2efea;
 		border-radius: 50%;
 	}
@@ -834,7 +856,7 @@ a.more {
 		color: #ffffff;
 	}
 	.footer-section .border-top {
-		border-color: #dce5e4;
+		border-color: #f2efea;
 	}
 	.footer-section .border-top.copyright {
 		font-size: 14px !important;
@@ -912,12 +934,12 @@ a.more {
 	.site-blocks-table tbody tr:first-child td {
 		border-top: 1px solid #f2efea !important;
 	}
-	.site-blocks-table .btn {
-		background: none !important;
-		color: #000000;
-		border: none;
-		height: auto !important;
-	}
+/* 	.site-blocks-table .btn { */
+/* 		background: #0080c0; */
+/* 		color: #000000; */
+/* 		border: none; */
+/* 		height: auto !important; */
+/* 	} */
 	.site-block-order-table th {
 		border-top: none !important;
 		border-bottom-width: 1px !important;
@@ -957,7 +979,31 @@ a.more {
 			right: -100px;
 		}
 	}
+
+/*  [결제창] 우편번호 버튼 */
+.addr_btn {
+	margin: 0 6px;
+	width: 60px;
+	height: 25px;
+	background-color: #c8c8c8;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 12px;
+	border: 1px solid #d9d9d9;
+	border-radius: 6px;
+}
 	
+/* [결제창] 결제하기 버튼 */
+.order_sc .payment_agree .paybtn {
+	margin: 0 6px;
+	width: 135px;
+	height: 50px;
+	background-color: #c8c8c8;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 20px;
+	border-radius: 6px;
+}
 
 /* 결제 화면(사진) */
 .mask1 {
@@ -997,9 +1043,87 @@ a.more {
    display: block;
 }
 
-/* 배송지 정보*/
-.deliver_wrap .deliver_wrap _deliveryInfos _deliveryInfoType{
-padding: 0 40px 0 0 ; 	
+/* [결제창] 결제 수단 */
+.order_sc .discount_wrap .discount_info, .order_sc .payment_wrap .payment_info
+	{
+	position: relative;
+	float: left;
+	padding: 30px 10px 0 49px;
+	width: 726px;
+	height: 100%;
+}
+
+/* [결제창] 결제 수단_계좌 이체 드롭다운 */ /*새로 추가*/
+.bankSelect {
+	width: 90px;
+	height: 22px;
+	font-size: 13px;
+}
+
+/* [결제창] 배송지 정보_연락처 드롭다운*/ /*새로 추가*/
+.telSelect {
+	width: 50px;
+	height: 22px;
+	font-size: 12px;
+}
+
+/* [결제창] 배송지 정보_내용*/
+.order_sc .deliver_wrap .addr_lists {
+	padding: 20px 0 20px;
+	line-height: 20px;
+	color: #000000;
+	font-size: 13px;
+}
+
+/* [결제창] 배송지 정보_배송메모 */ /*새로 추가*/
+.dMemo {
+	margin-top: 20px;
+}
+
+
+/* [메인] bx slider left button*/
+.prevbtn {
+	left: -40px;
+}
+
+/* [메인] bx slider right button*/
+.nextbtn {
+	right: -40px;
+}
+
+/* [메인] 주간순위 표 */
+.first {
+	color: #6b90dc; ,
+	background: #6b90dc;
+	font-size: 32px;
+}
+
+/* [메인] 주간순위 1,2,3위 텍스트 */
+.rank_text {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	background: #d4d4d4;
+	border-radius: 5px;
+	text-align: center;
+	color: #ffffff;
+	transform: translate(-50%, -50%);
+	top: 56%;
+	left: 32%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* [메인] 주간순위 전체 */
+.product-section .product-item {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	padding-bottom: 50px;
+	cursor: pointer;
+	background: #f2efea;
 }
 
 
@@ -1020,8 +1144,11 @@ padding: 0 40px 0 0 ;
 /*    border: 1px solid #000000; */
    width: 175px;
    height: 50px;
-   background-color: #ffffff;
+   background-color: #d8d7cf;
    color: #e7e7e7;
    cursor: pointer;
 }
-	
+/* [회원가입] 입력 항목 배경화면 */
+.bg-light{
+	background: #f2efea;
+}	

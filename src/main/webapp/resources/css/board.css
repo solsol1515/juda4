@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* [getBoardList] (타이틀) 게시판 */
+h2 b{
+	color : #5a5852;
+}
+
+/* [getBoardList] 새 글 등록 */
+b{
+	color: #778a73;
+}
+
+/* [getBoardList] 글 목록 */
+.product-item b{
+	color	: #716c60 ;
+}
+
+/* [getBoardList] 게시글 셀 (항목) */
+.product-item th{
+	background: #ced5c8;
+	color	: #716c60;
+	text-align: center;
+	border-radius: 3px;
+}
+
+/* [getBoardList] 게시글 목록 */
+div table{
+	background-color: #dfe3db;
+	border-radius: 5px;
+	color: #7a8071;
+	text-align: center;
+}
+
+/* [getBoardList] 제목 가운데 정렬 */
+div table a{
+	color: #7a8071;
+	text-align: center;
+}
+
+/* [insertBoard] h1 중앙 정렬 */
+h4{
+	font-weight: bold;
+	text-align: center;
+}
+
+/* [insertBoard] 테이블 셀 간격 조정 */
+.boardTbl {
+	cellpadding: 10px;
+	font-weight: bold;
+}
+
+/* [insertBoard] 셀(항목) 가운데 정렬*/
+.td1 {
+background: #ced5c8;
+text: bold;
+text-align: center;
+}
+
+/* [insertBoard] 폼태그 */
+#boardForm{
+	align: center;
+	width: 500px;
+	margin: auto;
+}
+
+/* [insertBoard] 새 글 등록 (submit) */
+.submit{
+	background: #e0e4dc;
+	border: 0;
+	border-radius: 3px;
+	color: #7a8071;
+	text-weight: bold;
+}
+
+
+
+
+
+

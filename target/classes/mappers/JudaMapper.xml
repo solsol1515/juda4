@@ -19,15 +19,51 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		VALUES (#{member_id}, #{password}, #{name}, #{gender}, #{tel}, #{email}, #{birth}, sysdate, #{agree_email}, #{agree_sns})
 	</insert>
 
-	<select id="selectAllLogin" parameterType="LoginVO" resultType="Integer">
+	<select id="selectAllLogin" parameterType="LoginVO" resultType="int">
 		SELECT			count(*)
 		FROM			Member
 		WHERE			member_id = #{member_id} AND password = #{password}
 	</select>
 
-	<select id="getGoods" parameterType="String" resultType="GoodsVO">
+	<select id="getGoods" parameterType="string" resultType="GoodsVO">
       SELECT * FROM Goods
       WHERE goods_id = #{goods_id}
    </select>
+
+
+	<!-- ##### 게시판 ##### -->
+<!-- 	<insert id="insertBoard" parameterType="board"> -->
+<!-- 		INSERT INTO BOARD(SEQ, TITLE, WRITER, CONTENT, REGDATE, CNT) -->
+<!-- 		VALUES(board_seq.nextval, #{title}, #{writer}, #{content}, sysdate, 0) -->
+<!-- 	</insert> -->
+	
+<!-- 	<update id="updateBoard" parameterType="board"> -->
+<!-- 		UPDATE BOARD SET -->
+<!-- 		TITLE = #{title}, -->
+<!-- 		CONTENT = #{content} -->
+<!-- 		WHERE SEQ = #{seq} -->
+<!-- 	</update> -->
+	
+<!-- 	<delete id="deleteBoard" parameterType="board"> -->
+<!-- 		DELETE FROM BOARD -->
+<!-- 		WHERE SEQ = #{seq} -->
+<!-- 	</delete> -->
+	
+<!-- 	<select id="getBoard" parameterType="board" resultType="board"> -->
+<!-- 		SELECT * -->
+<!-- 		FROM BOARD -->
+<!-- 		WHERE SEQ = #{seq} -->
+<!-- 	</select> -->
+	
+<!-- 	<select id="getBoardList" parameterType="hashmap" resultType="board"> -->
+<!-- 		SELECT * -->
+<!-- 		FROM BOARD -->
+<!-- 		<where> -->
+<!-- 		<if test="searchCondition !=null"> -->
+<!-- 			${searchCondition} like '%${searchKeyword}%' -->
+<!-- 		</if> -->
+<!-- 		</where> -->
+<!-- 		ORDER BY SEQ DESC -->
+<!-- 	</select> -->
 
 </mapper>

@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                   <li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-                  <li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -180,22 +180,33 @@
 	</div>
 	<!-- 주간 순위 끝 -->
 
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
 
-	<!-- 홈페이지 정보 시작-->
-	<h5>
-		<strong>(주)전통주 프로젝트</strong>
-	</h5>
-	<h6>사업자 번호 228-24-23029</h6>
-	<h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
-	<br />
-	<h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-	<h5>
-		<strong>고객센터</strong>
-	</h5>
-	<h6>강원도 춘천시 퇴계로 89</h6>
-	<h6>전화 1588-8282</h6>
-	<h6>1:1 문의 바로 가기</h6>
-	<!-- 홈페이지 정보 끝 -->
+			<!-- footer 정보 시작-->
+			<div class="row footer-content">
+				<div class="col-md-3" style="float: none; margin:0 auto;">
+				   <h5>
+				      <strong>(주)전통주 프로젝트</strong>
+				   </h5>
+				   <h6>사업자 번호 228-24-23029</h6>
+				   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
+				   <br />
+				   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
+				   <h5><br/>
+				      <strong>고객센터</strong>
+				   </h5>
+				   <h6>강원도 춘천시 퇴계로 89</h6>
+				   <h6>전화 1588-8282</h6>
+				   <h6>1:1 문의 바로 가기</h6>
+				</div>
+			</div>
+			<!-- footer 정보 끝 -->
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
 
 
 

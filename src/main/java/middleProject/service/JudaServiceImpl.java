@@ -1,5 +1,6 @@
 package middleProject.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import middleProject.dao.JudaDAO;
+import middleProject.domain.BoardVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
 import middleProject.domain.LoginVO;
@@ -51,15 +53,55 @@ public class JudaServiceImpl implements JudaService {
 
 	@Override
 	public void logout(HttpSession session) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public boolean loginCheck(LoginVO vo, HttpSession session) {
-		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public void insertBoard(BoardVO vo) {
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {
+	}
+
+	@Override
+	public BoardVO getBoard(BoardVO vo) {
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getBoardList(HashMap map) {
+		return null;
+	}
 	
+	
+	// ##### 게시판 #####
+//	public void insertBoard(BoardVO vo) {
+//		judaDAO.insertBoard(vo);
+//	}
+//
+//	public void updateBoard(BoardVO vo) {
+//		judaDAO.updateBoard(vo);
+//	}
+//
+//	public void deleteBoard(BoardVO vo) {
+//		judaDAO.deleteBoard(vo);
+//	}
+//
+//	public BoardVO getBoard(BoardVO vo) {
+//		return judaDAO.getBoard(vo);
+//	}
+//
+//	public List<BoardVO> getBoardList(HashMap map) {
+//		return judaDAO.getBoardList(map);
+//	}
 	
 }

@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.java.basic">
+	<logger name="com.kubg.controller">
 		<level value="info" />
 	</logger>
 	

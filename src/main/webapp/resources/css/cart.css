@@ -21,7 +21,7 @@ body {
 	line-height: 28px;
 	color: #7e7567;
 	font-size: 14px;
-	background-color: #d7dacd;
+	background: #f2efea;
 }
 
 a {
@@ -246,6 +246,10 @@ a.more {
 		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
+	#btn-black{
+		vertical-align: middle;
+		align: center;
+	}
 	
 	/* 찜하기, 장바구니 hover */
 	.btn .btn-cart:hover {
@@ -301,11 +305,12 @@ a.more {
 		border-color: white;
 		color: #ffffff;
 	}
-	
+	/* [장바구니] 하단 결제 금액 표기창 */
 	.row .under-cart-table .table{
-		color: #f6f6f6;
-		background: #c9d1c2;
-		border-color: #c9d1c2;
+		color: #6c734a;
+		background: #e6e3d9;
+		border-color: #e6e3d9;
+		text-align: center;
 	}
 	
 	.section-title {
@@ -577,7 +582,6 @@ a.more {
 	position: center;
 	}
 	.testimonial-slider-wrap {
-	
 		position: relative;
 	}
 	.testimonial-slider-wrap .tns-inner {
@@ -592,8 +596,7 @@ a.more {
 			font-size: 18px;
 		}
 	}
-	.testimonial-slider-wrap .item .testimonial-block .author-info .author-pic
-		{
+	.testimonial-slider-wrap .item .testimonial-block .author-info .author-pic{
 		margin-bottom: 20px;
 	}
 	.testimonial-slider-wrap .item .testimonial-block .author-info .author-pic img
@@ -889,10 +892,10 @@ a.more {
 		overflow: auto;
 	}
 	.site-blocks-table .product-thumbnail {
-		width: 500px;
+		width: 200px;
 	}
 	.site-blocks-table .btn {
-		padding: 10px 10px;
+		padding: 2px 10px;
 	}
 	.site-blocks-table thead th {
 		padding: 30px;

@@ -19,7 +19,7 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
    rel="stylesheet">
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
-<link href="resources/css/style.css" rel="stylesheet">
+<link href="resources/css/style2.css" rel="stylesheet">
 <title>[결 제 창]</title>
 
 <link type="text/css" rel="stylesheet"
@@ -55,7 +55,7 @@
                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                   <li class="nav-item "><a class="nav-link" href="intro.do">우리들의
                         이야기(소개)</a></li>
-                  <li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">

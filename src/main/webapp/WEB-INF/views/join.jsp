@@ -28,7 +28,7 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-						<li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+						<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
 						<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -48,7 +48,7 @@
         
             <div class="row align-items-center justify-content-between">
                 <a class="navbar-brand h1 text-center" href="index.do">
-                    <span class="text-dark h4">회원</span> <span class="text-primary h4">가입</span>                 
+                    <span class="text-dark h4">회원</span><span class="text-primary h4">가입</span>                 
                 </a>
             </div>
             

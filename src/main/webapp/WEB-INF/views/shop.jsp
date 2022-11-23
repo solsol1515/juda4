@@ -28,7 +28,7 @@
 	<title>구경하기</title>
 </head>
 
-<body>
+<body style="background: #f2efea;">
 
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
@@ -42,7 +42,7 @@
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-					<li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+					<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -77,7 +77,7 @@
 	<!-- 주종 nav바 -->
 	<div class="goods_type-section my-5">
 		<div class="container">
-			<ul class="nav justify-content-center">
+			<ul class="nav justify-content-center" style="background: #f2efea;">
 				<li class="nav-item">
 					<a class="nav-link active" name="all">전체</a>
 				</li>
@@ -180,12 +180,12 @@
 
 
 	<!-- Start Footer Section -->
-	<footer class="footer-section">
+	<footer class="footer-section" style="background: #f2efea;">
 		<div class="container relative">
 
 			<!-- footer 정보 시작-->
 			<div class="row footer-content">
-				<div class="col-md-3" style="float: none; margin:0 auto;">
+				<div class="col-md-3" style="float: none; margin:0 auto; background: none;">
 				   <h5>
 				      <strong>(주)전통주 프로젝트</strong>
 				   </h5>

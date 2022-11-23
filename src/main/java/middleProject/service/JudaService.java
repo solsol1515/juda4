@@ -1,9 +1,11 @@
 package middleProject.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import middleProject.domain.BoardVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
 import middleProject.domain.LoginVO;
@@ -28,4 +30,23 @@ public interface JudaService {
 	
 	// 상세페이지 (수량 증감)
 	public GoodsVO getGoods(String goods_id);
+	
+	
+	// ========== 게시판 ==========
+	// 글 등록
+	void insertBoard(BoardVO vo);
+
+	// 글 수정
+	void updateBoard(BoardVO vo);
+
+	// 글 삭제
+	void deleteBoard(BoardVO vo);
+
+	// 글 상세 조회
+	BoardVO getBoard(BoardVO vo);
+
+	// 글 목록 조회
+	List<BoardVO> getBoardList(HashMap map);
+	
+	
 }

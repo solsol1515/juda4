@@ -8,11 +8,10 @@
 </head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link src="resources/js/login_ok.js">
 <script src="https://code.jquery.com/jquery-3.4.1.js"
   			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   			crossorigin="anonymous">
-  </script>
+</script>
 <script type="text/javascript" src="resources/js/login.js"></script>
 
 <link href="resources/css/style_login.css" rel="stylesheet" type="text/css">

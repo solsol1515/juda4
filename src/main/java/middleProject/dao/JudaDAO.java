@@ -1,7 +1,9 @@
 package middleProject.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
+import middleProject.domain.BoardVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
 import middleProject.domain.LoginVO;
@@ -22,5 +24,14 @@ public interface JudaDAO {
 	// 상세페이지 (수량 증감)		
 	GoodsVO getGoods(String goods_id);
 		
-	
+	// 게시판 
+	public void insertBoard(BoardVO vo);
+
+	public void updateBoard(BoardVO vo) ;
+
+	public void deleteBoard(BoardVO vo);
+
+	public BoardVO getBoard(BoardVO vo) ;
+
+	public List<BoardVO> getBoardList(HashMap map) ;
 }

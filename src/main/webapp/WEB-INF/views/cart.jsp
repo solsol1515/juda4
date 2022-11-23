@@ -41,7 +41,7 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-						<li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+						<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
 						<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -95,7 +95,7 @@
                           <td class="product-info">
                           	<input type="checkbox" class="goods-select" />
                             <img src="resources/images/dangamMyoungjak.jpg" alt="Image" class="img-fluid" style="width:200px; height:200px;" />
-                            <span class="h5 text-black">상품 1</span>
+                            <span class="h6 text-black">상품 1</span>
                           </td>
                           
                           <td>
@@ -132,7 +132,7 @@
               </div>
               
               <div class="row">
-              	<div class="under-cart-table">
+              	<div class="under-cart-table" style="text-align:center;">
               		<table id="calculate-total-table" class="table">
               			<tr>
               				<td>선택 상품 금액</td>
@@ -185,6 +185,35 @@
 			</div>
 		</footer>
 		<!-- End Footer Section -->
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<!-- <img src="images/sofa.png" alt="Image" class="img-fluid"> -->
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-3">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
+            				</p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
 
 
 		<script src="resources/js/bootstrap.bundle.min.js"></script>
