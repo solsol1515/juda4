@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		VALUES (#{member_id}, #{password}, #{name}, #{gender}, #{tel}, #{email}, #{birth}, sysdate, #{agree_email}, #{agree_sns})
 	</insert>
 
-	<select id="selectAllLogin" parameterType="LoginVO" resultType="int">
+	<select id="selectLogin" parameterType="LoginVO" resultType="int">
 		SELECT			count(*)
 		FROM			Member
 		WHERE			member_id = #{member_id} AND password = #{password}
@@ -30,10 +30,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       WHERE goods_id = #{goods_id}
    </select>
 
+<!-- 로그인 안 할 경우 카트 접근 금지 -->
+
+<!-- 	<insert id="insertDelivery" parameterType="PayVO"> -->
+<!--     	  INSERT INTO DELIVERY -->
+<!--     	  VALUES (delivery_seq.nextval, #{delivery_name}, #{receiver}, #{delivery_tel}, #{postcode}, #{addr}, -->
+<!--     	   			   #{addr_detail}, #{delivery_memo}) -->
+<!--    	</insert> -->
+   
+<!--    	<insert id="insertOrderList" parameterType="PayVO"> -->
+<!--       INSERT INTO ORDERLIST -->
+<!--       VALUES (orderlist_seq.nextval, '결제완료', sysdate, #{o_sum}, #{member_id}) -->
+<!--    	</insert> -->
 
 	<!-- ##### 게시판 ##### -->
 <!-- 	<insert id="insertBoard" parameterType="board"> -->
-<!-- 		INSERT INTO BOARD(SEQ, TITLE, WRITER, CONTENT, REGDATE, CNT) -->
+<!-- 		INSERT INTO QnA(Q_ID, Q_DATE, TITLE, WRITER, CONTENT, REGDATE, CNT) -->
 <!-- 		VALUES(board_seq.nextval, #{title}, #{writer}, #{content}, sysdate, 0) -->
 <!-- 	</insert> -->
 	

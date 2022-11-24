@@ -1,11 +1,24 @@
 @charset "UTF-8";
 
+/* [getBoard] 하단 하이퍼링크(등록/삭제/목록)*/
+.bottomList{
+	text-align: center;
+}
+
+/*  [getBoard] 하단 하이퍼링크(등록/삭제/목록) a태그 */
+.bottomList a{
+	color: #73725e;
+	margin: 10px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
 /* [getBoardList] (타이틀) 게시판 */
 h2 b{
 	color : #5a5852;
 }
 
-/* [getBoardList] 새 글 등록 */
+/* [getBoardList] 새 글 등록 (하이퍼 링크) */
 b{
 	color: #778a73;
 }
@@ -37,39 +50,42 @@ div table a{
 	text-align: center;
 }
 
-/* [insertBoard] h1 중앙 정렬 */
+/* [insertBoard][getBoard] h4 중앙 정렬 */
 h4{
 	font-weight: bold;
 	text-align: center;
 }
 
-/* [insertBoard] 테이블 셀 간격 조정 */
+/* [insertBoard] 테이블 셀 간격 조정 | [getBoard] 적용되는지 확인 어려움 */
 .boardTbl {
 	cellpadding: 10px;
 	font-weight: bold;
 }
 
-/* [insertBoard] 셀(항목) 가운데 정렬*/
+/* [insertBoard][getBoard] 셀(항목) 가운데 정렬*/
 .td1 {
 background: #ced5c8;
 text: bold;
 text-align: center;
 }
 
-/* [insertBoard] 폼태그 */
+/* [insertBoard][getBoard] 폼태그 */
 #boardForm{
 	align: center;
 	width: 500px;
 	margin: auto;
 }
 
-/* [insertBoard] 새 글 등록 (submit) */
+/* [insertBoard] 새 글 등록 (submit) | [getBoard] 글 수정(submit)*/
 .submit{
 	background: #e0e4dc;
 	border: 0;
 	border-radius: 3px;
 	color: #7a8071;
+	font-weight: bold;
 	text-weight: bold;
+	width: 80pt; 
+	height: 30pt;
 }
 
 

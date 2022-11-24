@@ -951,7 +951,6 @@ a.more {
 		margin-left: 300px;
 }
 
-
 @media ( min-width : 768px) {
 		.product_sangse .image img {
 			left: 0px;
@@ -960,4 +959,11 @@ a.more {
 		}
 	}
 	
-	
+	#plusMinus  .btn {
+	display : inline;
+	color : red;
+}	
+
+#plusMinus input {
+	width : 70px;
+}

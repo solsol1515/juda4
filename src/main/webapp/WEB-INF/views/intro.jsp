@@ -177,34 +177,59 @@
 
 		
 		
-
-	<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
-
-			<!-- footer 정보 시작-->
-			<div class="row footer-content">
-				<div class="col-md-3" style="float: none; margin:0 auto;">
-				   <h5>
-				      <strong>(주)전통주 프로젝트</strong>
-				   </h5>
-				   <h6>사업자 번호 228-24-23029</h6>
-				   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
-				   <br />
-				   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-				   <h5>
-				      <strong>고객센터</strong>
-				   </h5>
-				   <h6>강원도 춘천시 퇴계로 89</h6>
-				   <h6>전화 1588-8282</h6>
-				   <h6>1:1 문의 바로 가기</h6>
-				</div>
+         <!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+	
+				<!-- footer 정보 시작-->
+				<div class="row footer-content" align="center">
+					<div class="col-md-8" style="float: none; margin:0 auto;">
+					   <h6><br/><br/>
+					      <strong>(주)전통주 프로젝트</strong>
+					   </h6>
+					   <h7>사업자 번호 228-24-23029</h7>
+					   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
+					   <br />
+					   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
+					   <h7><br/>
+					      <strong><b>고객센터</b></strong>
+					   </h7>
+					   <h7>강원도 춘천시 퇴계로 89</h7>
+					   <h7>전화 1588-8282</h7>
+					   <h7>1:1 문의 바로 가기</h7>
+					</div>
+				</div><br/>
+				<!-- footer 정보 끝 -->
+	
 			</div>
-			<!-- footer 정보 끝 -->
+		</footer>
+		<!-- End Footer Section -->
 
-		</div>
-	</footer>
-	<!-- End Footer Section -->
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+
+				<div class="border-top copyright">
+					<div class="row pt-3">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
+            				</p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
 
 
 		<script src="resources/js/bootstrap.bundle.min.js"></script>

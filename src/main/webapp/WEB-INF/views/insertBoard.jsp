@@ -9,7 +9,7 @@
 * License: https://creativecommons.org/licenses/by/3.0/
 */ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,9 @@
 		<link href="resources/css/tiny-slider.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
 		<link href="resources/css/board.css" rel="stylesheet">
+		<script type="text/javascript" src="resources/js/board.js"></script>
 		<title>(community)게시판 화면 입니다</title>
+	
 	</head>
 
 	<body>
@@ -34,7 +36,7 @@
 <!-- Start Header/Navigation -->
       <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
          <div class="container">
-            <a class="navbar-brand" href="index.do"><img src="resources/images/로고1.png" alt="logo" style="width:100px; height:50px;"></a>
+            <a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo" style="width:200px; height:100px;"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -68,75 +70,106 @@
 								<p><a href="" class="btn btn-secondary me-2">구경하기</a>
 							</div>
 						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		<!-- End Hero Section -->
 
 		
-
-		<!-- Start Why Choose Us Section -->
-		<div class="why-choose-section">
-			<div class="container">
-				
-				
-				<div class="row my-5">
-					
-					<div class="col-6 col-md-6 col-lg-3 mb-4">
-						<div class="feature">
-							<div class="icon">
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-6 col-md-6 col-lg-3 mb-4">
-						<div class="feature">
-							<div class="icon">
-							
-							</div>
-						</div>
-					</div>
-
-					<div class="col-6 col-md-6 col-lg-3 mb-4">
-						<div class="feature">
-							<div class="icon">
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<!-- End Why Choose Us Section -->
 		
-		
-		<h4>글 등록</h4>		
-		<hr><br/>
-		<form action="getBoardList.do" method="get" id="boardForm"> <!--  enctype="multipart/form-data" -->
-			<table border="0" cellpadding="10" cellspacing="0" class="boardTbl"><!-- cellpadding: 셀 & 글자 간 간격 / cellspacing: 셀 간 간격 -->
+		<h4>글 등록</h4><br/>		
+		<hr>
+		<form action="community.do" method="get" id="boardForm"> <!--  enctype="multipart/form-data" -->
+			<table border="0" cellpadding="5" cellspacing="0" class="boardTbl"><!-- cellpadding: 셀 & 글자 간 간격 / cellspacing: 셀 간 간격 -->
+				<tr>
+					<td bgcolor="orange"class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
+					<td align="left"><input type="hidden" name='title' />${board.q_id}</td>
+				</tr>
+				<tr>
+					<td bgcolor="orange" class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
+					<td align="left"><input type="hidden" name='writer'/>${board.view_count}</td>
+				</tr>
+				<tr>
+					<td bgcolor="orange" class="td1">작성자</td><!-- 작성자 아이디값 가져오기 -->
+					<td align="left"><input type="hidden" name='writer'/>${board.member_id}</td>
+				</tr>
+				<tr>
+					<td bgcolor="orange" class="td1">등록일</td> <!-- SYSDATE 가져오기 -->
+					<td align="left"><input type="hidden" name='writer'/>${sysdate}</td>
+				</tr>
 				<tr>
 					<td bgcolor="orange" width="100" class="td1">제목</td>
 					<td align="left"><input type="text" name='title' /></td>
-				</tr>
-				<tr>
-					<td bgcolor="orange" class="td1">작성자</td>
-					<td align="left"><input type="text" name='writer'/></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange" class="td1">내용</td>
 					<td align="left"><textarea cols="40" rows="10"  name='content'></textarea></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit"	class="submit" value=" 새 글 등록 " /></td>
+					<td colspan="2" align="center">
+						<input type="submit" class="submit" value="등 록 하 기 "/>
+					</td>
 				</tr>
 			</table>
 		</form>
-		<hr>
-		<a href="getBoardList.do">글 목록 가기</a>
+		
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+	
+				<!-- footer 정보 시작-->
+				<div class="row footer-content" align="center">
+					<div class="col-md-8" style="float: none; margin:0 auto;">
+					   <h6><br/><br/>
+					      <strong>(주)전통주 프로젝트</strong>
+					   </h6>
+					   <h7>사업자 번호 228-24-23029</h7>
+					   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
+					   <br />
+					   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
+					   <h7><br/>
+					      <strong><b>고객센터</b></strong>
+					   </h7>
+					   <h7>강원도 춘천시 퇴계로 89</h7>
+					   <h7>전화 1588-8282</h7>
+					   <h7>1:1 문의 바로 가기</h7>
+					</div>
+				</div>
+				<!-- footer 정보 끝 -->
+	
+			</div>
+		</footer>
+		<!-- End Footer Section -->
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<!-- <img src="images/sofa.png" alt="Image" class="img-fluid"> -->
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-3">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
+            				</p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+		
+		
 </body>
 </html>

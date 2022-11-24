@@ -25,6 +25,16 @@
 		<link href="resources/css/tiny-slider.css" rel="stylesheet">
 		<link href="resources/css/cart.css" rel="stylesheet">
 		<title> cart </title>
+		
+		<script type="text/javascript">
+      		var id = '<%=(String)session.getAttribute("id")%>';
+      
+     		 if(id == 'null') {
+         		alert('로그인해야 이용할 수 있는 페이지입니다.');
+         		location.href = "loginForm.do";
+      		}
+   </script>
+		
 	</head>
 
 	<body>
@@ -155,7 +165,7 @@
               </div>
         
             </div>
-          </div>
+          </div><br/><br/><br/><br/>
 		
 
 		<!-- Start Footer Section -->

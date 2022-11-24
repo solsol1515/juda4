@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-
 <!doctype html>
 <html lang="ko">
 <head>
@@ -23,12 +22,16 @@
 
    <body>
 
-<!-- 상단 메뉴탭 -->
+<!-- [시작] 상단 메뉴탭 -->
       <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
          <div class="container">
-            <a class="navbar-brand" href="index.html"> <img src="resources/images/로고.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html">
+            	<img src="resources/images/로고.png" alt="logo">
+            </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            	data-bs-target="#navbarsFurni" aria-controls="navbarsFurni"
+            	aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -48,28 +51,31 @@
          </div>
             
       </nav>
-      <!-- End Header/Navigation -->
+      <!-- [끝] 상단 메뉴탭 -->
 
       <!-- [시작]상단 탭 아래 -->
          <div class="hero">
             <div class="container">
                <div class="row justify-content-between">
                      <div class="col-lg-5">
-                        <div class="intro-excerpt"><h1>일단공백</h1></div>
-                     </div>
-                  <div class="col-lg-7"></div>
+                        <div class="intro-excerpt">
+                        	<h1>일단공백</h1></div>
+                     	</div>
+                  		
+                  		<div class="col-lg-7"></div>
+               
                </div>
             </div>
          </div>
       <!-- [끝] 상단 탭 아래 -->
 
 
-	<!-- bx Slider 시작 -->
+
+<!-- [시작] bx Slider  -->
 	<div class="testimonial-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 mx-auto text-center">
-				</div>
+				<div class="col-lg-7 mx-auto text-center"></div>
 			</div>
 
 			<div class="row justify-content-center">
@@ -77,136 +83,185 @@
 					<div class="testimonial-slider-wrap text-center">
 
 						<div id="testimonial-nav">
-							<span class="prev" data-controls="prev"><span
-								class="fa fa-chevron-left"></span></span> <span class="next"
+							<span class="prevbtn" data-controls="prev"><span
+								class="fa fa-chevron-left"></span></span> <span class="nextbtn"
 								data-controls="next"><span class="fa fa-chevron-right"></span></span>
 						</div>
 
 						<div class="testimonial-slider">
-						
-							<!-- 첫번째 슬라이더 시작 -->
+
+							<!-- [시작] 1 슬라이더  -->
 							<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/BS스윗마마.jpg" width=1200 height=900
-									class="img-fluid product-thumbnail"> 
-									</span>
+									src="resources/images/bsmain1.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
-							<!-- 첫번째 슬라이더 끝 -->
+							<!-- [끝] 1 슬라이더  -->
 
-							<!-- 두번째 슬라이더 시작 -->
+							<!-- [시작] 2 슬라이더  -->
 							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/BS얼떨결에.jpg" width=1200 height=900
-									class="img-fluid product-thumbnail"> 
-									</span>
+									src="resources/images/bsmain2.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
-							<!-- 두번째 슬라이더 끝 -->
+							<!-- [끝] 2 슬라이더  -->
 
-							<!-- 세번째 슬라이더 시작 -->
+							<!-- [시작] 3 슬라이더  -->
 							<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/BS요새로제.jpg" width=1200 height=900
-									class="img-fluid product-thumbnail">
-									</span>
+									src="resources/images/bsmain3.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
-							<!-- 세번째 슬라이더 끝 -->
+							<!-- [끝] 3 슬라이더  -->
+
+							<!--[시작] 4 슬라이더  -->
+							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
+								<a class="product-item" href="cart.html"> <img
+									src="resources/images/bsmain4.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
+								</a>
+							</div>
+							<!-- [끝] 4 슬라이더  -->
+
+							<!--[시작] 5 슬라이더  -->
+							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
+								<a class="product-item" href="cart.html"> <img
+									src="resources/images/bsmain5.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
+								</a>
+							</div>
+							<!-- [끝] 5 슬라이더  -->
+
+							<!-- [시작] 6 슬라이더  -->
+							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
+								<a class="product-item" href="cart.html"> <img
+									src="resources/images/bsmain6.jpg" width=2000 height=900
+									class="img-fluid product-thumbnail"> </span>
+								</a>
+							</div>
+							<!-- [끝] 6 슬라이더  -->
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--  bx Slider 끝 -->
+	<!--  [끝] bx Slider -->
 
 
-	<!-- 주간 순위 시작 -->
+
+	<!-- [시작] 주간 순위  -->
 	<div class="product-section">
 		<div class="container">
 			<div class="row" style="text-align: center;">
 
-				<!-- 주간순위 제목 시작 -->
+				<!-- [시작] 주간순위 제목  -->
 				<body style="text-align: center;">
 					<h2 class="mb-4 section-title">주간 순위</h2>
 				</body>
-				<!-- 주간순위 제목 끝 -->
+				<!-- [끝] 주간순위 제목  -->
 
-				<!-- 주간순위 1위 시작 -->
-				
-				<div class="first_text">
-				<p>1</p></div>
+
+				<!-- [시작] 주간순위 1위  -->
 				<div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html"><img
-						src="resources/images/고흥유자주1.jpg"
+						src="resources/images/요새로제1.jpg"
 						class="img-fluid product-thumbnail">
-						<h3 class="product-title">고흥유자주</h3> <strong class="product-price">1,000,000</strong>
-						<span class="icon-cross"> <img
-							src="resources/images/cross.svg" class="img-fluid">
-					</span>
-					</a>
+						<div class="rank_text">1</div>
+						<h3 class="product-title">[댄싱사이더]   요새로제</h3> <strong class="product-price">19,900</strong>
+						 </a>
 				</div>
-				<!-- 주간순위 1위 끝 -->
+				<!-- [끝] 주간순위 1위  -->
 
 
-				<!-- 주간순위 2위 시작 -->
+				<!-- [시작] 주간순위 2위 -->
 				<div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html"> <img
-						src="resources/images/문삼이공잣1.jpg"
+						src="resources/images/메들리손막걸리1.jpg"
 						class="img-fluid product-thumbnail">
-						<h3 class="product-title">문삼이공잣</h3> <strong class="product-price">700,000</strong>
-						<span class="icon-cross"> <img
-							src="resources/images/cross.svg" class="img-fluid">
-					</span>
+					<div class="rank_text"><p>2</p></div>
+						<h3 class="product-title">[메들리]  메들리손막걸리</h3> <strong class="product-price">10,000</strong>
 					</a>
 				</div>
-				<!-- 주간순위 2위 끝 -->
+				<!-- [끝] 주간순위 2위 -->
 
 
-				<!-- 주간순위 3위 시작 -->
+				<!-- [시작] 주간순위 3위 -->
 				<div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html"> <img
-						src="resources/images/미상1.jpg" class="img-fluid product-thumbnail">
-						<h3 class="product-title">미상</h3> <strong class="product-price">840,000</strong>
-						<span class="icon-cross"> <img
-							src="resources/images/cross.svg" class="img-fluid">
-					</span>
+						src="resources/images/킹키펌킨1.jpg" 
+						class="img-fluid product-thumbnail">
+					<div class="rank_text"><p>3</p></div>
+						<h3 class="product-title">[댄싱사이더]  킹키펌킨</h3> <strong class="product-price">6,900</strong>
+						
 					</a>
 				</div>
-				<!-- 주간순위 3위 끝 -->
+				<!-- [끝] 주간순위 3위 -->
 			</div>
 		</div>
 	</div>
-	<!-- 주간 순위 끝 -->
+	<!-- [끝] 주간 순위  -->
 
-	<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
-
-			<!-- footer 정보 시작-->
-			<div class="row footer-content">
-				<div class="col-md-3" style="float: none; margin:0 auto;">
-				   <h5>
-				      <strong>(주)전통주 프로젝트</strong>
-				   </h5>
-				   <h6>사업자 번호 228-24-23029</h6>
-				   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
-				   <br />
-				   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-				   <h5><br/>
-				      <strong>고객센터</strong>
-				   </h5>
-				   <h6>강원도 춘천시 퇴계로 89</h6>
-				   <h6>전화 1588-8282</h6>
-				   <h6>1:1 문의 바로 가기</h6>
-				</div>
+<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+	
+				<!-- footer 정보 시작-->
+				<div class="row footer-content" align="center">
+					<div class="col-md-8" style="float: none; margin:0 auto;">
+					   <h6><br/><br/>
+					      <strong>(주)전통주 프로젝트</strong>
+					   </h6>
+					   <h7>사업자 번호 228-24-23029</h7>
+					   <h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
+					   <br />
+					   <h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
+					   <h7><br/>
+					      <strong><b>고객센터</b></strong>
+					   </h7>
+					   <h7>강원도 춘천시 퇴계로 89</h7>
+					   <h7>전화 1588-8282</h7>
+					   <h7>1:1 문의 바로 가기</h7>
+					</div>
+				</div><br/>
+				<!-- footer 정보 끝 -->
+	
 			</div>
-			<!-- footer 정보 끝 -->
+		</footer>
+		<!-- End Footer Section -->
 
-		</div>
-	</footer>
-	<!-- End Footer Section -->
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<!-- <img src="images/sofa.png" alt="Image" class="img-fluid"> -->
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-3">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
+            				</p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
 
 
 

@@ -9,17 +9,17 @@ $(function(){
 		
 		$.ajax({
 			
-			type : 'get',
-			url : 'goodsList',
-			data : {goods_type : goods_type, goods_sort : goods_sort},
-			dataType : 'json',
-			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
-			success : function(result) {
-				alert(result);
+			type 		 		: 'get',
+			url			 		: 'goodsList',
+			data 		 		: {goods_type : goods_type, goods_sort : goods_sort},
+			dataType		: 'json',
+			contentType	: "application/x-www-form-urlencoded;charset=UTF-8",
+			success 		: function(result) {
+										alert(result);
 			},
-			error : function(err) {
-				alert('error');
-				console.log(err);
+			error 			: function(err) {
+									alert('error');
+										console.log(err);
 			}
 			
 		});	// end of ajax
