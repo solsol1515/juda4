@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>취합2 (11. 24.)</title>
+<title>게시판 만들기용 (2copy본)</title>
 </head>
 <body>
 

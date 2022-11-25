@@ -79,31 +79,31 @@
 		
 		<h4>글 등록</h4><br/>		
 		<hr>
-		<form action="community.do" method="get" id="boardForm"> <!--  enctype="multipart/form-data" -->
+		<form action="createBoard.do" method="get" id="boardForm"> <!--  enctype="multipart/form-data" -->
 			<table border="0" cellpadding="5" cellspacing="0" class="boardTbl"><!-- cellpadding: 셀 & 글자 간 간격 / cellspacing: 셀 간 간격 -->
 				<tr>
-					<td bgcolor="orange"class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
-					<td align="left"><input type="hidden" name='title' />${board.q_id}</td>
+					<td class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
+					<td align="left"><input type="hidden" name='q_id'  value='${board.q_id}' />${board.q_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
-					<td align="left"><input type="hidden" name='writer'/>${board.view_count}</td>
+					<td class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
+					<td align="left"><input type="hidden" name='view_count' />${board.view_count}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" class="td1">작성자</td><!-- 작성자 아이디값 가져오기 -->
-					<td align="left"><input type="hidden" name='writer'/>${board.member_id}</td>
+					<td class="td1">작성자</td><!-- 작성자 아이디값 가져오기 -->
+					<td align="left"><input type="hidden" name='member_id'/>${board.member_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" class="td1">등록일</td> <!-- SYSDATE 가져오기 -->
-					<td align="left"><input type="hidden" name='writer'/>${sysdate}</td>
+					<td class="td1">등록일</td> <!-- SYSDATE 가져오기 -->
+					<td align="left"><input type="hidden" name='q_date' />${sysdate}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" width="100" class="td1">제목</td>
-					<td align="left"><input type="text" name='title' /></td>
+					<td class="td1">제목</td>
+					<td align="left"><input type="text" name='q_title' /></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" class="td1">내용</td>
-					<td align="left"><textarea cols="40" rows="10"  name='content'></textarea></td>
+					<td class="td1">내용</td>
+					<td align="left"><textarea cols="40" rows="10"  name='q_content'></textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">

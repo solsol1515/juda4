@@ -30,6 +30,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       WHERE goods_id = #{goods_id}
    </select>
 
+	
+	
 <!-- 로그인 안 할 경우 카트 접근 금지 -->
 
 <!-- 	<insert id="insertDelivery" parameterType="PayVO"> -->
@@ -44,38 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!--    	</insert> -->
 
 	<!-- ##### 게시판 ##### -->
-<!-- 	<insert id="insertBoard" parameterType="board"> -->
-<!-- 		INSERT INTO QnA(Q_ID, Q_DATE, TITLE, WRITER, CONTENT, REGDATE, CNT) -->
-<!-- 		VALUES(board_seq.nextval, #{title}, #{writer}, #{content}, sysdate, 0) -->
-<!-- 	</insert> -->
 	
-<!-- 	<update id="updateBoard" parameterType="board"> -->
-<!-- 		UPDATE BOARD SET -->
-<!-- 		TITLE = #{title}, -->
-<!-- 		CONTENT = #{content} -->
-<!-- 		WHERE SEQ = #{seq} -->
-<!-- 	</update> -->
-	
-<!-- 	<delete id="deleteBoard" parameterType="board"> -->
-<!-- 		DELETE FROM BOARD -->
-<!-- 		WHERE SEQ = #{seq} -->
-<!-- 	</delete> -->
-	
-<!-- 	<select id="getBoard" parameterType="board" resultType="board"> -->
-<!-- 		SELECT * -->
-<!-- 		FROM BOARD -->
-<!-- 		WHERE SEQ = #{seq} -->
-<!-- 	</select> -->
-	
-<!-- 	<select id="getBoardList" parameterType="hashmap" resultType="board"> -->
-<!-- 		SELECT * -->
-<!-- 		FROM BOARD -->
-<!-- 		<where> -->
-<!-- 		<if test="searchCondition !=null"> -->
-<!-- 			${searchCondition} like '%${searchKeyword}%' -->
-<!-- 		</if> -->
-<!-- 		</where> -->
-<!-- 		ORDER BY SEQ DESC -->
-<!-- 	</select> -->
+
 
 </mapper>

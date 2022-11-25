@@ -21,7 +21,7 @@ public interface JudaDAO {
 	Integer selectLogin(LoginVO vo) ;
 	
 	// 아이디 중복 확인
-	Integer idCheck(LoginVO vo);
+	Integer checkId(LoginVO vo);
 	
 // =======================================================	
 	/* [상품 페이지] */
@@ -50,18 +50,18 @@ public interface JudaDAO {
 	List<CartVO> getCart();
 	
 	// 구매하기
-		void insertOrder(PayVO payVo);
+	void insertOrder(PayVO payVo);
 		
 // =======================================================		
 		
 	// 게시판 
-	public void insertBoard(BoardVO vo);
-
-	public void updateBoard(BoardVO vo) ;
-
-	public void deleteBoard(BoardVO vo);
-
-	public BoardVO getBoard(BoardVO vo) ;
-
-	public List<BoardVO> getBoardList(HashMap map) ;
+//	public void insertBoard(BoardVO vo);
+//
+//	public void updateBoard(BoardVO vo) ;
+//
+//	public void deleteBoard(BoardVO vo);
+//
+//	public BoardVO getBoard(BoardVO vo) ;
+//
+//	public List<BoardVO> getBoardList(HashMap map) ;
 }

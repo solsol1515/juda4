@@ -26,11 +26,6 @@ public class AjaxRestController {
 	}
 
 // =======================================================	
-/* [우리들의 이야기(게시판)] */
-	@PostMapping("insertBoard.do")
-	public void insertBoard() {
-		
-	}
 
 	
 // =======================================================	

@@ -33,45 +33,40 @@
 		<h1>게시글 목록</h1>
 		
 		<!-- 검색창 -->
-		<form action="getBoardList.do">
+		<form action="community.do">
 		<select name='searchCondition'>
-			<option value='title'>제목</option>
-			<option value='writer'>작성자</option>
-			<option value='content'>내용</option>
+			<option value='q_title'>제목</option>
+			<option value='member_id'>작성자</option>
+			<option value='q_content'>내용</option>
 		</select>
 		<input type='text' name='searchKeyword'>
 		<input type='submit' value='검색' >
 		</form>
 		<hr/>
 		
-	<table border="1">
-			<tr>
-				<th bgcolor="orange" width="100">번호</th>
-				<th bgcolor="orange" width="200">제목</th>
-				<th bgcolor="orange" width="150">작성자</th>
-				<th bgcolor="orange" width="150">등록일</th>
-				<th bgcolor="orange" width="100">조회수</th>
-			</tr>
-			<c:forEach items="${boardList}" var="board">
-				<tr>
-					<td>2</td>
-					<td align="left">
-						<a href="getBoard.do?seq=${board.seq}">집에 보내줘</a>
-					</td>
-					<td>박박</td>
-					<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd"/></td>
-					<td>215</td>
-				</tr>
-<!-- 				<tr> -->
-<%-- 					<td>${board.seq }</td> --%>
-<%-- 					<td align="left"><a href="getBoard.do?seq=${board.seq}"> --%>
-<%-- 							${board.title }</a></td> --%>
-<%-- 					<td>${board.writer }</td> --%>
-<%-- 					<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd"/></td> --%>
-<%-- 					<td>${board.cnt}</td> --%>
-<!-- 				</tr> -->
-			</c:forEach>
-		</table>
-		<br> <a href="insertBoard.do">글쓰기</a>
+	<table border="0">
+						<tr>
+									<th width="50">번호</th>
+									<th width="100">조회수</th>
+									<th width="100">작성자</th>
+									<th width="150">등록일</th>
+									<th width="200">제목</th>
+									<th width="300">내용</th>
+								</tr>
+							<c:forEach items="${boardList }" var="board">
+									<tr>
+										<td>${board.q_id}</td>
+										<td>${board.member_id}</td>
+										<td>${board.q_date }</td>
+										<td align="left"><a href="getBoard.do?q_id=${board.q_id }">
+												${board.q_title}</a></td>
+										<td>${board.q_content}</td>
+										<td>${board.view_count}</td>
+										<td>${board.q_category}</td>
+										<!-- 추가 -->
+									</tr>
+								</c:forEach>
+		</table><br>
+			<a href="insertBoard.do">글쓰기</a>
 </body>
 </html>

@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<% String pjName = "/juda3"; %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,53 +86,36 @@
 					<!-- End Column 1 -->
 
 					<!-- Start Column 2 -->
-					<div class="col-12 col-md-9 col-lg-9 mb-5 mb-md-0">
+					<div class="col-12 col-md-9 col-lg-9 mb-5 mb-md-0" align="center">
 						<a class="product-item"id="boardList" align="center"><h4><b>글 목 록</b></h4><br/><br/>
 							<table border="0" >
 								<tr>
 									<th width="50">번호</th>
-									<th width="100">조회수</th>
-									<th width="100">작성자</th>
 									<th width="150">등록일</th>
+									<th width="100">작성자</th>
 									<th width="200">제목</th>
 									<th width="300">내용</th>
-										<!-- 추가 -->
+									<th width="100">조회수</th>
 								</tr>
-				<%-- 			<c:forEach items="${boardList }" var="board"> --%>
+						<c:if test="${boardList!=null}">		
+							<c:forEach items="${boardList}" var="board">
 									<tr>
-										<td>001</td>
-										<td>215</td>
-										<td>hansol</td>
-										<td>22/11/24</td>
-										<td><a href="insertBoard.do?b_id=${board.q_id}">
-												집에 보내주세요</a></td>
-										<td>오늘은 집에 몇 시쯤 갈 수 있을까요? 우리는 잘 하고 있는 게 맞을까요? 집에 보내줘 당장</td>
-					<%-- 					<td>${board.q_id}</td> --%>
-					<%-- 					<td>${board.member_id}</td> --%>
-					<%-- 					<td>${board.q_date }</td> --%>
-					<%-- 					<td align="left"><a href="getBoard.do?q_id=${board.q_id }"> --%>
-					<%-- 							${board.q_title}</a></td> --%>
-					<%-- 					<td>${board.q_content}</td> --%>
-					<%-- 					<td>${board.view_count}</td> --%>
-					<%-- 					<td>${board.q_category}</td> --%>
+										<td>${board.q_id}</td>
+										<td>${board.q_date}</td>
+										<td>${board.member_id}</td>
+										<td align="left"><a href="getBoard.do?q_id=${board.q_id}">
+												${board.q_title}</a></td>
+										<td>${board.q_content}</td>
+										<td>${board.view_count}</td>
 										<!-- 추가 -->
-										<td>
-										</td>					
 									</tr>
-				<%-- 			</c:forEach> --%>
-		</table><br/><br/>
-		<a href="insertBoard.do"><b>새 글 등록</b></a>
-						
-						
-<!-- 							<img src="images/product-1.png" class="img-fluid product-thumbnail"> -->
-								
-<!-- 							<span class="icon-cross"> -->
-<!-- 								<img src="images/cross.svg" class="img-fluid"> -->
-<!-- 							</span> -->
-				</a>
-			</div> 
+							</c:forEach>
+						</c:if>	
+							</table><br/><br/>
+							<a href="insertBoard.do"><b>새 글 등록</b></a>
+						</a>
+					</div> 
 					<!-- End Column 2 -->
-
 
 				</div>
 			</div>

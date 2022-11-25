@@ -85,29 +85,31 @@
 		<h4>글 상세</h4><br/>		
 		<hr>
 		<form action="updateBoard.do" method="get" id="boardForm">
-			<input name="seq" type="hidden" value="${board.seq}" />
+			<input name="q_id" type="hidden" value="${board.q_id}" />
 			<table border="0" cellpadding="5" cellspacing="0" class="boardTbl">
 				<tr>
-					<td bgcolor="orange" width="100"  class="td1">제목</td>
-					<td align="left"><input name="title" type="text"
-						value="${board.title}" /></td>
+					<td class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
+					<td align="left"><input type="hidden" name='q_id' value="${board.q_id}"/>${board.q_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">작성자</td>
-					<td align="left">${board.writer}</td>
+					<td class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
+					<td align="left"><input type="hidden" name='view_count' value="${board.view_count}"/>${board.view_count}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">내용</td>
-					<td align="left"><textarea name="content" cols="40" rows="10">
-						${board.content}</textarea></td>
+					<td class="td1">작성자</td>
+					<td align="left"><input type="hidden" name='member_id' value="${board.member_id}"/>${board.member_id}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">등록일</td>
-					<td align="left">${board.regDate}</td>
+					<td class="td1">등록일</td>
+					<td align="left"><input type="hidden" name='q_date' value="${board.q_date}"/>${board.q_date}</td>
 				</tr>
 				<tr>
-					<td bgcolor="orange"  class="td1">조회수</td>
-					<td align="left">${board.cnt}</td>
+					<td width="100" class="td1">제목</td>
+					<td align="left"><input type="text" name='q_title' value="${board.q_title}"/></td>
+				</tr>
+				<tr>
+					<td class="td1">내용</td>
+					<td align="left"><textarea cols="40" rows="10"  name='q_content'>${board.q_content}</textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
@@ -119,7 +121,7 @@
 		
 		<div class="bottomList">
 			<a href="insertBoard.do">글 등록하기</a>&nbsp;&nbsp;&nbsp; 
-			<a href="deleteBoard.do?seq=${board.seq }">글 삭제하기</a>&nbsp;&nbsp;&nbsp;
+			<a href="deleteBoard.do?q_id=${board.q_id}">글 삭제하기</a>&nbsp;&nbsp;&nbsp;
 			<a href="community.do">글 목록 보기</a>
 		</div><hr/>
 		
