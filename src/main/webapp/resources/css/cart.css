@@ -967,3 +967,9 @@ a.more {
 #plusMinus input {
 	width : 70px;
 }
+
+input[type=checkbox] {
+   accent-color: #808080;
+   width: 13px;
+   height: 13px;
+}

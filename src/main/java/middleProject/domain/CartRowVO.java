@@ -3,7 +3,7 @@ package middleProject.domain;
 import lombok.Data;
 
 @Data
-public class CartInsertVO {
+public class CartRowVO {
 	
 	private String member_id;
 	private String goods_id;

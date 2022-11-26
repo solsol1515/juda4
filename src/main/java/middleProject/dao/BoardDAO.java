@@ -7,11 +7,14 @@ import middleProject.domain.BoardVO;
 
 public interface BoardDAO {
 
-	public void insertBoard(BoardVO vo);
+	public Integer insertBoard(BoardVO vo);
 
 	public void updateBoard(BoardVO vo) ;
+	
+	// 조회수 카운팅
+	void updateView_count(Integer qId);
 
-	public void deleteBoard(BoardVO vo);
+	public void deleteBoard(Integer q_id);
 
 	public BoardVO getBoard(BoardVO vo) ;
 

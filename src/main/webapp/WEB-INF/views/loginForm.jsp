@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,8 @@
 
   <div class="parent clearfix">
     <div class="bg-illustration">
-      <img src="resources/images/로고1.png" alt="logo">
+      <a class="navbar-brand" href="index.do">
+         <img src="resources/images/로고.png" alt="logo"></a>
 
       <div class="burger-btn">
         <span></span>

@@ -7,15 +7,17 @@ import middleProject.domain.BoardVO;
 
 
 public interface BoardService {
-	// CRUD 기능의 메소드 구현
 	// 글 등록
-	void insertBoard(BoardVO vo);
+	Integer insertBoard(BoardVO vo);
 
 	// 글 수정
 	void updateBoard(BoardVO vo);
 
+	// 조회수 카운팅
+	void updateView_count(Integer qId);
+	
 	// 글 삭제
-	void deleteBoard(BoardVO vo);
+	void deleteBoard(Integer q_id);
 
 	// 글 상세 조회
 	BoardVO getBoard(BoardVO vo);

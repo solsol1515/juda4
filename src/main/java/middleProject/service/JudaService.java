@@ -6,7 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import middleProject.domain.BoardVO;
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.CartVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
@@ -28,7 +28,7 @@ public interface JudaService {
 	Integer checkId(LoginVO vo);
 
 	
-	// =======================================================	
+// =======================================================	
 	/* [ 상품 목록 페이지 ] */
 	
 	// 상품목록 띄우기
@@ -41,35 +41,27 @@ public interface JudaService {
 	/* [ 상품 상세 페이지 ] */
 	
 	// 같은 상품을 또 넣을지 확인
-		Integer checkCart(CartInsertVO vo);
+	String checkCart(CartRowVO vo);
 		
-		// 장바구니에 넣기
-		void insertCart(CartInsertVO vo);
+	// 장바구니에 넣기
+	void insertCart(CartRowVO vo);
 		
-		// 장바구니를 띄우기
-		List<CartVO> getCart();
+	// 장바구니를 띄우기
+	List<CartVO> getCart(String member_id);
 		
-		// 구매하기
-		void insertOrder(PayVO payVo);
+	// 장바구니의 상품의 수량을 바꾸기
+	void updateCart(CartRowVO vo);
 		
+// =======================================================	
+
 	
 // =======================================================	
-		/* [ 게시판 ] */
+	/* [ 장바구니 ] */
 	
-//	// 글 등록
-//	void insertBoard(BoardVO vo);
-//
-//	// 글 수정
-//	void updateBoard(BoardVO vo);
-//
-//	// 글 삭제
-//	void deleteBoard(BoardVO vo);
-//
-//	// 글 상세 조회
-//	BoardVO getBoard(BoardVO vo);
-//
-//	// 글 목록 조회
-//	List<BoardVO> getBoardList(HashMap map);
+	// 장바구니의 행을 삭제하기
+	void deleteCart(CartRowVO vo);
 	
+	// 구매하기
+	void insertOrder(PayVO payVo);
 	
 }

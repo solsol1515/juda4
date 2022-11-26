@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.LoginVO;
 import middleProject.domain.MemberVO;
@@ -28,6 +28,8 @@ public class JudaController {
 		return url;
 	}
 	
+// =======================================================	
+	/* [ 함께하기(회원가입) ] */
 	
 	// 회원 가입
 	@RequestMapping("joinSuccess.do")
@@ -36,9 +38,11 @@ public class JudaController {
 		vo.setBirth(vo.getYy()+"-"+vo.getMm()+"-"+vo.getDd());
 		System.out.println(vo);
 		m.addAttribute("result", judaService.insertMember(vo));
+		m.addAttribute("member_id", vo.getMember_id()); // ## 한 줄 추가한 거 맞는지 확인 !!! 회원가입 축하할 때 아이디 명시하기 위해서
 	}
 
  // =======================================================	
+	/* [ 들어가기(로그인) ] */	
 	
 	// 로그인
     @RequestMapping("login_check.do")
@@ -47,7 +51,7 @@ public class JudaController {
        Integer result = judaService.selectLogin(vo);
        
        if(result == 1) {		// 로그인 성공 시
-          session.setAttribute("id",  vo.getMember_id() );
+          session.setAttribute("member_id",  vo.getMember_id() );
           return "index";
        }else { 					// 로그인 실패 시
           return "loginForm";
@@ -63,9 +67,8 @@ public class JudaController {
     	return "index";
     }
 // =======================================================   
-
-  //**** 상품 페이지 ****//
-	
+	/* [ 구경하기(쇼핑) ] */
+    
   	// 상품목록
   	@RequestMapping("shop.do")
   	public void getGoodsList(GoodsTypeVO vo, Model m) {
@@ -86,15 +89,20 @@ public class JudaController {
 //  	}
   	
   	// 장바구니 내용을 가져오기 (장바구니창 띄우기용)
-  	@RequestMapping("getCart.do")
-  	public void insertAndGetCart(CartInsertVO vo, Model m) {
-  		m.addAttribute("cartList", judaService.getCart());
+  	@RequestMapping("cart.do")
+  	public void getCart(Model m, HttpSession session) {
+  		m.addAttribute("cartList", judaService.getCart((String)session.getAttribute("member_id")));
   	}
     
 // =======================================================	
-  	/* [게시판(community)] - 블로그*/
+  	/* [ 장바구니 ] */
   	
-
+  	// 장바구니 행 삭제
+  	@RequestMapping("deleteCart.do")
+  	public String deleteCart(CartRowVO vo) {
+  		judaService.deleteCart(vo);
+  		return "redirect:/cart.do";
+  	}
   	
   	
   		

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import middleProject.domain.BoardVO;
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.CartVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
@@ -24,7 +24,7 @@ public interface JudaDAO {
 	Integer checkId(LoginVO vo);
 	
 // =======================================================	
-	/* [상품 페이지] */
+	/* [상품 목록 페이지] */
 	
 	// 상품목록 띄우기
 	List<GoodsVO> getGoodsList(GoodsTypeVO vo);
@@ -34,34 +34,33 @@ public interface JudaDAO {
 	GoodsVO getGoods(String goods_id);
 	
 // =======================================================		
-	
+	/* [  ] */
 
 	
 // =======================================================		
-	/* [상품목록]*/
+	/* [ 상품 목록 ]*/
 	
 	// 같은 상품을 또 넣을지 확인
-	Integer checkCart(CartInsertVO vo);
+	String checkCart(CartRowVO vo);
 	
 	// 장바구니에 넣기
-	void insertCart(CartInsertVO vo);
+	void insertCart(CartRowVO vo);
 	
 	// 장바구니를 띄우기
-	List<CartVO> getCart();
+	List<CartVO> getCart(String member_id);
 	
-	// 구매하기
-	void insertOrder(PayVO payVo);
+	// 장바구니의 상품의 수량을 바꾸기
+	void updateCart(CartRowVO vo);
+	
 		
 // =======================================================		
-		
-	// 게시판 
-//	public void insertBoard(BoardVO vo);
-//
-//	public void updateBoard(BoardVO vo) ;
-//
-//	public void deleteBoard(BoardVO vo);
-//
-//	public BoardVO getBoard(BoardVO vo) ;
-//
-//	public List<BoardVO> getBoardList(HashMap map) ;
+	/* [ 장바구니 ] */
+
+	// 장바구니의 행을 삭제하기
+	void deleteCart(CartRowVO vo);
+	
+	// 구매하기
+	void insertOrder(PayVO payVo);	
+
+
 }

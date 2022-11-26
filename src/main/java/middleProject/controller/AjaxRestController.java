@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.LoginVO;
 import middleProject.service.JudaService;
 
@@ -29,20 +29,24 @@ public class AjaxRestController {
 
 	
 // =======================================================	
-	
-	//**** 장바구니 추가/확인 (상품상세 페이지) ****//
+	/* [ 장바구니 ] 장바구니 추가/확인 (상품상세 페이지) */
 	
 		// 같은 상품을 또 넣을지 확인
 		@GetMapping("checkCart.do")
-		public Integer checkCart(CartInsertVO vo) {
-			return judaService.checkCart(vo);
+		public String checkCart(CartRowVO vo) {
+				return judaService.checkCart(vo);
 		}
 		
 		// 장바구니 추가
 		@PostMapping("insertCart.do")
-		public void insertCart(CartInsertVO vo) {
-			judaService.insertCart(vo);
+		public void insertCart(CartRowVO vo) {
+				judaService.insertCart(vo);
 		}
-	
+		
+		// 장바구니의 상품의 수량만 바꾸기	(장바구니창에도 사용)
+		@PostMapping("updateCart.do")
+		public void updateCart(CartRowVO vo) {
+				judaService.updateCart(vo);
+		}
 	
 }

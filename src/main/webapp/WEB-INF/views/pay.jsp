@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+   
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
@@ -13,6 +15,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap4" />
 
+
 <!-- Bootstrap CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <link
@@ -21,6 +24,7 @@
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <title>[결 제 창]</title>
+
 
 <link type="text/css" rel="stylesheet"
    href="https://ssl.pstatic.net/static.checkout/layout/202211161500/css/customer/chk_n_common.css">
@@ -32,6 +36,15 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="resources/js/pay.js"></script>
 
+	<script type="text/javascript">
+		var member_id = '<%=(String)session.getAttribute("member_id")%>';
+    
+		if(member_id == 'null') {
+			alert('로그인해야 이용할 수 있는 페이지입니다.');
+			location.href = "loginForm.do";
+		}
+	</script>
+
 </head>
 <body class="w_bg1">
    <div id="wrap">
@@ -41,8 +54,8 @@
          class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
          arial-label="Furni navigation bar">
          <div class="container">
-            <a class="navbar-brand" href="index.html"> <img
-               src="resources/images/로고.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.do">
+            <img src="resources/images/로고.png" alt="logo"></a>
 
             <button class="navbar-toggler" type="button"
                data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
@@ -59,7 +72,12 @@
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                  <li><a class="nav-link" href="login.do">들어가기(로그인)</a></li>
+                   <li>
+			          <c:choose>
+				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+			          </c:choose>
+		          </li>
                   <li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
                   <li><a class="nav-link" href="cart.do"><img
                         src="resources/images/cart24.png"></a></li>

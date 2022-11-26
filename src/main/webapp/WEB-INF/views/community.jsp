@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix='c'%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <% String pjName = "/juda3"; %>
 
 <!DOCTYPE html>
@@ -21,6 +21,21 @@
 		<link href="resources/css/tiny-slider.css" rel="stylesheet">
 		<link href="resources/css/style.css" rel="stylesheet">
 		<link href="resources/css/board.css" rel="stylesheet">
+		
+		<script type="text/javascript" >
+		
+			let result = <%= request.getParameter("result")%>	
+			
+			if (result!=null) {
+				
+					if(result>0) {
+							alert('새글 등록이 완료되었습니다.');
+					} else {
+							alert('새글 등록이 실패되었습니다.');
+					}
+			}
+		</script>
+		
 		<title>(community)게시판 화면 입니다</title>
 	</head>
 
@@ -38,12 +53,17 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                   <li class="nav-item"><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
-                  <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
+                  <li class=""><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
+                  <li class="active"><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                  <li><a class="nav-link" href="login.do">들어가기(로그인)</a></li>
+                   <li>
+			          <c:choose>
+				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+			          </c:choose>
+		          </li>
                   <li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
                   <li><a class="nav-link" href="cart.do"><img src="resources/images/cart24.png"></a></li>
                   <li><a class="nav-link" href="myPage.do"><img src="resources/images/user24.png"></a></li>
@@ -90,13 +110,13 @@
 						<a class="product-item"id="boardList" align="center"><h4><b>글 목 록</b></h4><br/><br/>
 							<table border="0" >
 								<tr>
-									<th width="50">번호</th>
-									<th width="150">등록일</th>
-									<th width="100">작성자</th>
-									<th width="200">제목</th>
-									<th width="300">내용</th>
+									<th width="100">번호</th>
+									<th width="200">등록일</th>
+									<th width="150">작성자</th>
+									<th width="400">제목</th>
 									<th width="100">조회수</th>
 								</tr>
+								
 						<c:if test="${boardList!=null}">		
 							<c:forEach items="${boardList}" var="board">
 									<tr>
@@ -105,7 +125,6 @@
 										<td>${board.member_id}</td>
 										<td align="left"><a href="getBoard.do?q_id=${board.q_id}">
 												${board.q_title}</a></td>
-										<td>${board.q_content}</td>
 										<td>${board.view_count}</td>
 										<!-- 추가 -->
 									</tr>

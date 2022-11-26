@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+
 
 <!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Untree.co">
+  <meta name="author" content="">
   <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="description" content="" />
@@ -17,7 +19,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
       <link href="resources/css/tiny-slider.css" rel="stylesheet">
       <link href="resources/css/style.css" rel="stylesheet">
-      <title>[홈 페 이 지]</title>
+      <title>[홈 페 이 지] 메인</title>
    </head>
 
    <body>
@@ -25,7 +27,7 @@
 <!-- [시작] 상단 메뉴탭 -->
       <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
          <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.do">
             	<img src="resources/images/로고.png" alt="logo">
             </a>
 
@@ -38,11 +40,16 @@
             <div class="collapse navbar-collapse" id="navbarsFurni">
                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
                   <li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
+                  <li class=""><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                  <li><a class="nav-link" href="login.do">들어가기(로그인)</a></li>
+                  <li>
+			          <c:choose>
+				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+			          </c:choose>
+		          </li>
                   <li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
                   <li><a class="nav-link" href="cart.do"><img src="resources/images/cart24.png"></a></li>
                   <li><a class="nav-link" href="myPage.do"><img src="resources/images/user24.png"></a></li>

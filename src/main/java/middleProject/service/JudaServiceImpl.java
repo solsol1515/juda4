@@ -1,6 +1,5 @@
 package middleProject.service;
 
-import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -9,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import middleProject.dao.JudaDAO;
-import middleProject.domain.BoardVO;
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.CartVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
@@ -24,8 +22,6 @@ public class JudaServiceImpl implements JudaService {
 	@Autowired
 	private JudaDAO judaDAO;
 
-// =======================================================		
-// =======================================================		
 // =======================================================		
 
 	/* [ 로그인 및 회원가입 ] */
@@ -65,30 +61,46 @@ public class JudaServiceImpl implements JudaService {
 // =======================================================
 	/* [상품 상세 페이지] */
 
-
 	// 같은 상품을 또 넣을지 확인
-	public Integer checkCart(CartInsertVO vo) {
+	public String checkCart(CartRowVO vo) {
 		return judaDAO.checkCart(vo);
 	}
 	
 	// 장바구니에 넣기
-	public void insertCart(CartInsertVO vo) {
+	public void insertCart(CartRowVO vo) {
 		judaDAO.insertCart(vo);
 	}
-	// 장바구니를 띄우기
-	public List<CartVO> getCart() {
-		return judaDAO.getCart();
+	
+	// 장바구니의 상품의 수량만 바꾸기
+	public void updateCart(CartRowVO vo) {
+		judaDAO.updateCart(vo);
 	}
 	
-	// 구매하기
-	public void insertOrder(PayVO payVo) {
-		judaDAO.insertOrder(payVo);
+	// 장바구니를 띄우기
+	public List<CartVO> getCart(String member_id) {
+		return judaDAO.getCart(member_id);
 	}
+	
 
 	@Override
 	public Integer checkId(LoginVO vo) {
 		return null;
 	}
 
-
+// =======================================================		
+/* [ 장바구니 ] */
+	
+	// 장바구니 행 삭제
+	public void deleteCart(CartRowVO vo) {
+		judaDAO.deleteCart(vo);
+	}
+		
+	// 구매하기
+	public void insertOrder(PayVO payVo) {
+		judaDAO.insertOrder(payVo);
+	}
+	
+	
 }
+
+// =======================================================		

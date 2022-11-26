@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* [관리자] 상품 수정 */
+.goods-update {
+   display: flex;
+   justify-content: center;
+}
+
+.goods-update2 {
+   align: left;
+}
+
+.updateMenu {
+   list-style: none;
+   font-size: 20px;
+}
+
+.updm {
+   width: 500px;
+   height: 300px;
+   border: 1px solid #b4b4b4;
+   border-radius: 7px;
+}
+
+.updm_ {
+   border: 1px solid #b4b4b4;
+   border-radius: 7px;
+}
+.imgBtn{
+   display:inline-block; 
+}
+.img-fluid {
+   margin-right: 60px;
+}
+/*[관리자] 관리자 모드 타이틀 */
+.adminmode {
+   text-align: center;
+}
+
+/* [관리자] 상품 관리-재고 관리-카테고리 */
+.category {
+   display: flex;
+   justify-content: center;
+}
+
+.category_gs {
+   padding: 1rem;
+   margin: 1rem;
+   font-size: 17px;
+}
+
+.ca {
+   text-decoration-line: none;
+}
+
+.goodsBtn{
+   color: #ffffff;
+   background: #c0c0c0;
+   border: 1px solid #c0c0c0;
+   border-radius: 25px;
+   float: right;
+   font-size: 17px;
+   width: 200px;
+   height: 50px;
+   margin : auto;
+}
+
+/* [관리자] 상품 관리-재고 관리-테이블 */
+.stock {
+   border-collapse: collapse;
+   text-align: left;
+   line-height: 1.5;
+   margin: 20px 10px;
+   width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.stock th {
+   width: 150px;
+   padding: 10px;
+   font-weight: bold;
+   vertical-align: top;
+   border: 1px solid #ccc;
+   text-align: center;
+   background: #c0c0c0;
+}
+
+.stock td {
+   width: 350px;
+   padding: 10px;
+   vertical-align: top;
+   border: 1px solid #ccc;
+   text-align: center;
+}
+
+/* [관리자] 상품 관리-재고 관리-저장 버튼 */
+.save_btn {
+   color: #ffffff;
+   background: #b9b9b9;
+   border: 1px solid #b9b9b9;
+   border-radius: 4px;
+   float: right;
+   font-size: 17px;
+   width: 70px;
+   height: 35px;
+   margin-right: 360px;
+}
+/* [관리자 메인페이지] 정렬*/
+.row {
+   bs-gutter-x: 1.5rem;
+   bs-gutter-y: 0;
+   display: flex;
+   flex-wrap: nowrap;
+   margin-top: calc(-1 * var(- -bs-gutter-y));
+   margin-right: calc(-.5 * var(- -bs-gutter-x));
+   margin-left: calc(-.5 * var(- -bs-gutter-x));
+   text-align: center;
+}
+
+.row my-5 {
+   text-align: right;
+}

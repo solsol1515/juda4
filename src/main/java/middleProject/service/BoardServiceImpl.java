@@ -17,8 +17,8 @@ public class BoardServiceImpl implements BoardService {
 	private BoardDAO boardDAO;
 
 	// 새 글 등록
-	public void insertBoard(BoardVO vo) {
-		boardDAO.insertBoard(vo);
+	public Integer insertBoard(BoardVO vo) {
+		return boardDAO.insertBoard(vo);
 	}
 
 	// 글 수정
@@ -26,9 +26,14 @@ public class BoardServiceImpl implements BoardService {
 		boardDAO.updateBoard(vo);
 	}
 	
+	// 조회수 카운팅
+	public void updateView_count(Integer qId) {
+		boardDAO.updateView_count(qId);
+	}
+	
 	// 글 삭제
-	public void deleteBoard(BoardVO vo) {
-		boardDAO.deleteBoard(vo);
+	public void deleteBoard(Integer q_id) {
+		boardDAO.deleteBoard(q_id);
 	}
 
 	public BoardVO getBoard(BoardVO vo) {

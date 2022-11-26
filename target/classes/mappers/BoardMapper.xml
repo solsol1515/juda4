@@ -11,22 +11,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 
-	<update id="updateView_count">
+	<update id="updateView_count" parameterType="Integer">
 		UPDATE 	QNA
-		SET 			veiw_count = veiw_count + 1 
+		SET 			view_count = view_count + 1
 		WHERE		q_id = #{q_id}
 	</update>
 	
 	
 	<update id="updateBoard" parameterType="BoardVO">
 		UPDATE QNA SET
-		Q_TITLE = #{q_title},
-		Q_CONTENT = #{q_content}
-		WHERE Q_ID = #{q_id}
+		Q_TITLE 			= #{q_title},
+		Q_CONTENT 		= #{q_content}
+		WHERE Q_ID 	= #{q_id}
 	</update>
 	
 	
-	<delete id="deleteBoard" parameterType="BoardVO">
+	<delete id="deleteBoard" parameterType="Integer">
 		DELETE FROM QNA
 		WHERE Q_ID = #{q_id}
 	</delete>

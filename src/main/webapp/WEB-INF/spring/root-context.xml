@@ -30,7 +30,7 @@
   <property name="typeAliases">
      <list>
         <value>middleProject.domain.BoardVO</value>
-        <value>middleProject.domain.CartInsertVO</value>
+        <value>middleProject.domain.CartRowVO</value>
         <value>middleProject.domain.CartVO</value>
         <value>middleProject.domain.GoodsTypeVO</value>
         <value>middleProject.domain.GoodsVO</value>

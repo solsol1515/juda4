@@ -15,9 +15,9 @@ public class BoardDAOImpl implements BoardDAO{
 	@Autowired
 	private SqlSessionTemplate mybatis;
 
-	public void insertBoard(BoardVO vo) {
+	public Integer insertBoard(BoardVO vo) {
 		System.out.println("===> Mybatis insertBoard() 호출");
-		mybatis.insert("Board.insertBoard", vo);
+		return mybatis.insert("Board.insertBoard", vo);
 	}
 
 	public void updateBoard(BoardVO vo) {
@@ -25,10 +25,16 @@ public class BoardDAOImpl implements BoardDAO{
 		mybatis.update("Board.updateBoard", vo);
 	}
 
-	public void deleteBoard(BoardVO vo) {
+	// 조회수 카운팅
+	public void updateView_count(Integer q_id) {
+		System.out.println("===> Mybatis updateView() 호출");
+		mybatis.update("Board.updateView_count", q_id);
+	}
+	
+	public void deleteBoard(Integer q_id) {
 		System.out.println("===> Mybatis deleteBoard() 호출");
-		
-		mybatis.delete("Board.deleteBoard", vo);
+		System.out.println(q_id);
+		mybatis.delete("Board.deleteBoard", q_id);
 	}
 
 	public BoardVO getBoard(BoardVO vo) {

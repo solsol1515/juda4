@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- 
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%> 
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -49,7 +44,12 @@
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                  <li><a class="nav-link" href="login.do">들어가기(로그인)</a></li>
+                   <li>
+			          <c:choose>
+				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+			          </c:choose>
+		          </li>
                   <li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
                   <li><a class="nav-link" href="cart.do"><img src="resources/images/cart24.png"></a></li>
                   <li><a class="nav-link" href="myPage.do"><img src="resources/images/user24.png"></a></li>
@@ -79,23 +79,11 @@
 		
 		<h4>글 등록</h4><br/>		
 		<hr>
-		<form action="createBoard.do" method="get" id="boardForm"> <!--  enctype="multipart/form-data" -->
+		<form action="createBoard.do" method="post" id="boardForm"> <!--  enctype="multipart/form-data" -->
 			<table border="0" cellpadding="5" cellspacing="0" class="boardTbl"><!-- cellpadding: 셀 & 글자 간 간격 / cellspacing: 셀 간 간격 -->
 				<tr>
-					<td class="td1">번호</td><!-- 시퀀스 값 가져오기 -->
-					<td align="left"><input type="hidden" name='q_id'  value='${board.q_id}' />${board.q_id}</td>
-				</tr>
-				<tr>
-					<td class="td1">조회수</td><!-- 클릭한 횟수 +1로 가져오기(UPDATE) -->
-					<td align="left"><input type="hidden" name='view_count' />${board.view_count}</td>
-				</tr>
-				<tr>
 					<td class="td1">작성자</td><!-- 작성자 아이디값 가져오기 -->
-					<td align="left"><input type="hidden" name='member_id'/>${board.member_id}</td>
-				</tr>
-				<tr>
-					<td class="td1">등록일</td> <!-- SYSDATE 가져오기 -->
-					<td align="left"><input type="hidden" name='q_date' />${sysdate}</td>
+					<td align="left"><input type="hidden" name='member_id' value="${sessionScope.member_id}"/>${sessionScope.member_id}</td>
 				</tr>
 				<tr>
 					<td class="td1">제목</td>

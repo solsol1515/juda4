@@ -38,10 +38,8 @@ public class BoardController {
    
    @RequestMapping("createBoard.do") // 새글쓰기
    public String insertBoard(BoardVO vo, HttpSession session) {
-	   vo.setMember_id((String)session.getAttribute("id"));
-	   System.out.println(">>>>>"+vo);
-	   boardService.insertBoard(vo);
-	   return "redirect:community.do";
+	   Integer result = boardService.insertBoard(vo);
+	   return "redirect:community.do?result=" + result;
    } // end of insertBoard
    
    
@@ -49,33 +47,34 @@ public class BoardController {
    public String saveBoard(BoardVO boardVO){
 	 //  System.out.println(boardVO.getContent());
 	   boardService.insertBoard(boardVO);
-	return "redirect:getBoardList.do";
+	return "redirect:community.do";
    } // end of saveBoard
    
    
    @RequestMapping("getBoard.do") // 작성한 글 보기
    public void getBoard(BoardVO boardVO, Model m) { // 데이터 넘겨주기 위해서 Model m 사용
+	   boardService.updateView_count(boardVO.getQ_id());
 	   m.addAttribute("board", boardService.getBoard(boardVO));
-		/*
-		 * BoardVO resultVO = boardService.getBoard(boardVO); m.addAttribute("board",
-		 * resultVO);
-		 */
+	   
+//		 BoardVO resultVO = boardService.getBoard(boardVO); m.addAttribute("board", resultVO);
+		
    } // end of getBoard 
    
    
    // 수정하기
    @RequestMapping("updateBoard.do")
    public String updateBoard(BoardVO vo) {
+	   System.out.println("수정");
 	   boardService.updateBoard(vo);
-	   return "redirect:getBoardList.do";
+	   return "redirect:community.do";
    } // end of updateBoard
    
 
    // 삭제하기
    @RequestMapping("deleteBoard.do")
-   public String deleteBoard(BoardVO vo) {
+   public String deleteBoard(Integer q_id) {
 	   System.out.println("삭제 ");
-	   boardService.deleteBoard(vo);
+	   boardService.deleteBoard(q_id);
       return "redirect:community.do";
    }
    

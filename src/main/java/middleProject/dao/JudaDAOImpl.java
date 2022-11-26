@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import middleProject.domain.BoardVO;
-import middleProject.domain.CartInsertVO;
+import middleProject.domain.CartRowVO;
 import middleProject.domain.CartVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
@@ -23,25 +23,25 @@ public class JudaDAOImpl implements JudaDAO {
 	private SqlSessionTemplate mybatis;
 
 // =======================================================		
+	/* [ 로그인 및 회원가입] */
 	
-	//**** 로그인/회원가입 ****//
-	
-		// 로그인
-		public Integer selectLogin(LoginVO vo) {
-			return mybatis.selectOne("JudaMap.selectLogin", vo);
-		}
+	// 로그인
+	public Integer selectLogin(LoginVO vo) {
+		return mybatis.selectOne("JudaMap.selectLogin", vo);
+	}
 		
-		// 회원가입
-		public Integer insertMember(MemberVO vo) {
-			return mybatis.insert("JudaMap.insertMember", vo);
-		}
+	// 회원가입
+	public Integer insertMember(MemberVO vo) {
+		return mybatis.insert("JudaMap.insertMember", vo);
+	}
 
-		// 아이디 중복 확인
-		public Integer checkId(LoginVO vo) {
-			return mybatis.selectOne("JudaMap.checkId", vo);
-		}
+	// 아이디 중복 확인
+	public Integer checkId(LoginVO vo) {
+		return mybatis.selectOne("JudaMap.checkId", vo);
+	}
+	
 // =======================================================		
-		/* [상품 목록 페이지] */
+	/* [상품 목록 페이지] */
 		
 	// 상품 목록 띄우기
 	public List<GoodsVO> getGoodsList(GoodsTypeVO vo) {
@@ -57,17 +57,26 @@ public class JudaDAOImpl implements JudaDAO {
 	/* [상품 상세 페이지] */
 	
 	// 같은 상품을 또 넣을지 확인
-	public Integer checkCart(CartInsertVO vo) {
-		return mybatis.selectOne("JudaMap.checkCart", vo);
+	public String checkCart(CartRowVO vo) {
+		System.out.println(">>"+vo);
+		String result = mybatis.selectOne("JudaMap.checkCart", vo);
+		System.out.println(">>>"+result);
+		return result;
 	}
 	
 	// 장바구니에 넣기
-	public void insertCart(CartInsertVO vo) {
+	public void insertCart(CartRowVO vo) {
 		mybatis.insert("JudaMap.insertCart", vo);
 	}
+	
+	// 장바구니의 상품의 수량만 바꾸기
+	public void updateCart(CartRowVO vo) {
+		mybatis.update("JudaMap.updateCart", vo);
+	}
+	
 	// 장바구니를 띄우기
-	public List<CartVO> getCart() {
-		return mybatis.selectList("JudaMap.getCart");
+	public List<CartVO> getCart(String member_id) {
+		return mybatis.selectList("JudaMap.getCart", member_id);
 	}
 
 	// 구매하기
@@ -77,37 +86,11 @@ public class JudaDAOImpl implements JudaDAO {
 	}
 	
 // =======================================================		
+	/* [ 장바구니 ] */
 	
+	// 장바구니 행 삭제
+		public void deleteCart(CartRowVO vo) {
+			mybatis.delete("JudaMap.deleteCart", vo);
+		}
 
-//	// ##### 게시판 #####
-//	public void insertBoard(BoardVO vo) {
-//		System.out.println("===> Mybatis insertBoard() 호출");
-//		int result = mybatis.insert("JudaMap.insertBoard", vo); // namespace.아이디
-//		System.out.println(result);
-//	}
-//
-//	public void updateBoard(BoardVO vo) {
-//		System.out.println("===> Mybatis updateBoard() 호출");
-//		mybatis.update("BoardDAO.updateBoard", vo);
-//	}
-//
-//	public void deleteBoard(BoardVO vo) {
-//		System.out.println("===> Mybatis deleteBoard() 호출");
-//		mybatis.delete("BoardDAO.deleteBoard", vo);
-//	}
-//
-//	public BoardVO getBoard(BoardVO vo) {
-//		System.out.println("===> Mybatis getBoard() 호출");
-//		return mybatis.selectOne("BoardDAO.getBoard", vo);
-//	}
-//
-//	public List<BoardVO> getBoardList(HashMap map) {
-//		System.out.println("===> Mybatis getBoardList() 호출");
-//		return mybatis.selectList("BoardDAO.getBoardList", map);
-//	}
-//
-//	@Override
-//	public Integer idCheck(LoginVO vo) {
-//		return null;
-//	}
 }
