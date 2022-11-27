@@ -84,11 +84,14 @@ text-align: center;
 	color: #7a8071;
 	font-weight: bold;
 	text-weight: bold;
+	text-align: left;
 	width: 80pt; 
 	height: 30pt;
 }
-
-
+/* [community] 게시글 목록 가운데 정렬 */
+.row{
+	justify-content: space-around;
+}
 
 
 

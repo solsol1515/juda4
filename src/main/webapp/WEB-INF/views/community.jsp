@@ -74,35 +74,26 @@
       </nav>
       <!-- End Header/Navigation -->
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>일 단 공 백</h1>
-								<p class="mb-4"></p>
-								<p><a href="" class="btn btn-secondary me-2">구경하기</a>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-							</div>
-						</div>
+	<!-- Start Hero Section -->
+		<div class="hero">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-12">
+					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+						<h2 class="mb-4 section-title"><b>게 시 판</b></h2>
+						<p class="mb-4" id="boardRules">우리 모두가 함께 사용하는 공간입니다. <br/>비속어 등 상대방에게 불쾌감을 줄 수 있는 내용은 삼가주시기바랍니다.</p>
+					</div> 
 					</div>
 				</div>
 			</div>
-		<!-- End Hero Section -->
+		</div>
+	<!-- End Hero Section -->
 
 		<!-- Start Product Section -->
 			<div class="container">
 				<div class="row">
 
 					<!-- Start Column 1 -->
-					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-						<h2 class="mb-4 section-title"><b>게 시 판</b></h2>
-						<p class="mb-4" id="boardRules">우리 모두가 함께 사용하는 공간입니다. 비속어 등 상대방에게 불쾌감을 줄 수 있는 내용은 삼가주시기바랍니다.</p>
-					</div> 
 					<!-- End Column 1 -->
 
 					<!-- Start Column 2 -->
@@ -125,7 +116,7 @@
 										<td>${board.member_id}</td>
 										<td align="left"><a href="getBoard.do?q_id=${board.q_id}">
 												${board.q_title}</a></td>
-										<td>${board.view_count}</td>
+										<td text-align="left">${board.view_count}</td>
 										<!-- 추가 -->
 									</tr>
 							</c:forEach>

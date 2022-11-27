@@ -42,11 +42,16 @@
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의
 							이야기(소개)</a></li>
-					<li class="active"><a class="nav-link" href="shop.do">구경하기</a></li>
+					<li class=""><a class="nav-link" href="shop.do">구경하기</a></li>
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li><a class="nav-link" href="login.do">들어가기(로그인)</a></li>
+					<li>
+	                  	<c:choose>
+		                  	<c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+		                  	<c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+	                  	</c:choose>
+	                </li>
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
 					<li><a class="nav-link" href="cart.do"><img
 							src="resources/images/cart24.png"></a></li>
@@ -59,22 +64,6 @@
 	</nav>
 	<!-- [끝] 상단 메뉴탭 -->
 
-	<!-- [시작] 상단 탭 아래 -->
-	<div class="hero">
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-lg-5">
-					<div class="intro-excerpt">
-						<h1>일단공백</h1>
-					</div>
-				</div>
-				<div class="col-lg-7"></div>
-			</div>
-		</div>
-	</div>
-	<!-- [끝] 상단 탭 아래 -->
-
-      
 
       <!-- [시작] 관리자 메인페이지 -->
       <div class="why-choose-section">

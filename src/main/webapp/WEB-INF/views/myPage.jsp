@@ -17,15 +17,23 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
+
+<script type="text/javascript">
+	var member_id = '<%=(String)session.getAttribute("member_id")%>';
+   
+	if(member_id == 'null') {
+		alert('로그인해야 이용할 수 있는 페이지입니다.');
+		location.href = "loginForm.do";
+	}
+</script>
+
       <title>[ 나 만 의  공 간 ] </title>
    </head>
 
    <body>
 
   <!-- [시작] 상단 메뉴탭 -->
-   <nav
-      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
-      arial-label="Furni navigation bar">
+   <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
       <div class="container">
          <a class="navbar-brand" href="index.do">
          <img src="resources/images/로고.png" alt="logo"></a>
@@ -62,21 +70,6 @@
 
    </nav>
    <!-- [끝] 상단 메뉴탭 -->
-
-   <!-- [시작] 상단 탭 아래 -->
-   <div class="hero">
-      <div class="container">
-         <div class="row justify-content-between">
-            <div class="col-lg-5">
-               <div class="intro-excerpt">
-                  <h1>일단공백</h1>
-               </div>
-            </div>
-            <div class="col-lg-7"></div>
-         </div>
-      </div>
-   </div>
-   <!-- [끝] 상단 탭 아래 -->
 
       
 

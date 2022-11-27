@@ -66,18 +66,6 @@
 		</nav>
 		<!-- End Header/Navigation -->
 
-		<!-- [시작]상단 탭 아래 -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-							<div class="col-lg-5">
-								<div class="intro-excerpt"><h1>일단공백</h1></div>
-							</div>
-						<div class="col-lg-7"></div>
-					</div>
-				</div>
-			</div>
-		<!-- [끝] 상단 탭 아래 -->
 
 		<!-- [시작]상세페이지 -->
 		<!--  [시작] 상품 이미지  -->

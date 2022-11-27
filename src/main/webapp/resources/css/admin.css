@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+li{
+	align:center;
+}
+
+textarea{
+	text-align: left;
+}
+
 /* [관리자] 상품 수정 */
 .goods-update {
    display: flex;

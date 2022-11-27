@@ -60,12 +60,6 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-5">
-						<div class="intro-excerpt">
-							<h1>구경하기</h1>
-						</div>
-					</div>
-					<div class="col-lg-7">
-						
 					</div>
 				</div>
 			</div>
@@ -78,25 +72,25 @@
 		<div class="container">
 			<ul class="nav justify-content-center" style="background: #f2efea;">
 				<li class="nav-item">
-					<a class="nav-link active" name="all">전체</a>
+					<a class="nav-link active" name="all" href="#">전체</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="hard_liquor">증류주</a>
+					<a class="nav-link" name="hard_liquor" href="#">증류주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="makgoli">막걸리</a>
+					<a class="nav-link" name="makgoli" href="#">막걸리</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="fruit_liquor">과실주</a>
+					<a class="nav-link" name="fruit_liquor" href="#">과실주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="yakju">약주</a>
+					<a class="nav-link" name="yakju" href="#">약주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="cheongju">청주</a>
+					<a class="nav-link" name="cheongju" href="#">청주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="others">기타</a>
+					<a class="nav-link" name="others" href="#">기타</a>
 				</li>
 			</ul>
 		</div>
@@ -108,16 +102,16 @@
 		<div class="container">
 			<ul class="nav">
 				<li class="nav-item">
-					<a class="nav-link active" name="like_count DESC">인기순</a>
+					<a class="nav-link active" name="like_count DESC" href="#">인기순</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="price">낮은 가격순</a>
+					<a class="nav-link" name="price" href="#">낮은 가격순</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="price DESC">높은 가격순</a>
+					<a class="nav-link" name="price DESC" href="#">높은 가격순</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="goods_id DESC">최신순</a>
+					<a class="nav-link" name="goods_id DESC" href="#">최신순</a>
 				</li>
 			</ul>
 		</div>
@@ -137,16 +131,16 @@
 						<div class="product-item">
 							<a href="sangse.do?goods_id=${vo.goods_id}" class="product-img">
 		
-								<div class="label new top-right">
-									<div class='content'>New</div>
+								<div class="label new top-right first">
+									<div class='content' >New</div>
 								</div>
 								<div class="label sale top-right second">
 									<div class='content'>Sale</div>
 								</div>
 		
 								<img src="resources/images/${vo.img_file}" alt="Image" class="img-fluid">
-							</a>
-							<h3 class="title"><a href="#">${vo.goods_name}</a></h3>
+							</a><br/><br/>
+							<h5 class="title"><a href="#">${vo.goods_name}</a></h5>
 							<div class="price"><span>${vo.price}원</span></div>
 							<div class="wishlist/cart">
 								<a href=""><img src="resources/images/like.png" style="width:20px; height:20px;"></a>

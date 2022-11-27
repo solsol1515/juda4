@@ -36,7 +36,7 @@ public class JudaController {
 	public void insertMember(MemberVO vo, Model m) {
 		vo.setTel(vo.getP_num1()+"-"+vo.getP_num2()+"-"+vo.getP_num3());
 		vo.setBirth(vo.getYy()+"-"+vo.getMm()+"-"+vo.getDd());
-		System.out.println(vo);
+
 		m.addAttribute("result", judaService.insertMember(vo));
 		m.addAttribute("member_id", vo.getMember_id()); // ## 한 줄 추가한 거 맞는지 확인 !!! 회원가입 축하할 때 아이디 명시하기 위해서
 	}

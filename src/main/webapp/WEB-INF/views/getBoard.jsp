@@ -61,26 +61,6 @@
       </nav>
       <!-- End Header/Navigation -->
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>일 단 공 백</h1>
-								<p class="mb-4"></p>
-								<p><a href="" class="btn btn-secondary me-2">구경하기</a>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
-
 
 		<h4>글 상세</h4><br/>		
 		<hr>
@@ -105,11 +85,11 @@
 				</tr>
 				<tr>
 					<td width="100" class="td1">제목</td>
-					<td align="left"><input type="text" name='q_title' value="${board.q_title}"/></td>
+					<td align="left"><input type="text" name='q_title' value="${board.q_title}" style="width:343px;"/></td>
 				</tr>
 				<tr>
 					<td class="td1">내용</td>
-					<td align="left"><textarea cols="40" rows="10"  name='q_content'>${board.q_content}</textarea></td>
+					<td align="left"><textarea cols="40" rows="10"  name='q_content' style="text-align:left !important">${board.q_content}</textarea></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">

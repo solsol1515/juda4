@@ -60,23 +60,6 @@
       </nav>
       <!-- [끝] 상단 메뉴탭 -->
 
-      <!-- [시작]상단 탭 아래 -->
-         <div class="hero">
-            <div class="container">
-               <div class="row justify-content-between">
-                     <div class="col-lg-5">
-                        <div class="intro-excerpt">
-                        	<h1>일단공백</h1></div>
-                     	</div>
-                  		
-                  		<div class="col-lg-7"></div>
-               
-               </div>
-            </div>
-         </div>
-      <!-- [끝] 상단 탭 아래 -->
-
-
 
 <!-- [시작] bx Slider  -->
 	<div class="testimonial-section">
@@ -100,7 +83,7 @@
 							<!-- [시작] 1 슬라이더  -->
 							<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain1.jpg" width=2000 height=900
+									src="resources/images/단감명작bx.png" width=100% height=900
 									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
@@ -109,7 +92,7 @@
 							<!-- [시작] 2 슬라이더  -->
 							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain2.jpg" width=2000 height=900
+									src="resources/images/사화정미소bx.png" width=100% height=900
 									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
@@ -118,7 +101,7 @@
 							<!-- [시작] 3 슬라이더  -->
 							<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain3.jpg" width=2000 height=900
+									src="resources/images/맑은내일유자bx.png" width=100% height=900
 									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
@@ -127,29 +110,13 @@
 							<!--[시작] 4 슬라이더  -->
 							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain4.jpg" width=2000 height=900
+									src="resources/images/사화정미소bx.png" width=100% height=900
 									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>
 							<!-- [끝] 4 슬라이더  -->
 
-							<!--[시작] 5 슬라이더  -->
-							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
-								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain5.jpg" width=2000 height=900
-									class="img-fluid product-thumbnail"> </span>
-								</a>
-							</div>
-							<!-- [끝] 5 슬라이더  -->
 
-							<!-- [시작] 6 슬라이더  -->
-							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
-								<a class="product-item" href="cart.html"> <img
-									src="resources/images/bsmain6.jpg" width=2000 height=900
-									class="img-fluid product-thumbnail"> </span>
-								</a>
-							</div>
-							<!-- [끝] 6 슬라이더  -->
 
 						</div>
 					</div>

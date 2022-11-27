@@ -22,6 +22,16 @@
 		<link href="resources/css/style.css" rel="stylesheet">
 		<link href="resources/css/board.css" rel="stylesheet">
 		<script type="text/javascript" src="resources/js/board.js"></script>
+		
+		<script type="text/javascript">
+			var member_id = '<%=(String)session.getAttribute("member_id")%>';
+	    
+			if(member_id == 'null') {
+				alert('로그인해야 이용할 수 있는 페이지입니다.');
+				location.href = "loginForm.do";
+			}
+		</script>
+		
 		<title>(community)게시판 화면 입니다</title>
 	
 	</head>
@@ -59,23 +69,6 @@
       </nav>
       <!-- End Header/Navigation -->
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>일 단 공 백</h1>
-								<p class="mb-4"></p>
-								<p><a href="" class="btn btn-secondary me-2">구경하기</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
-
-		
 		
 		<h4>글 등록</h4><br/>		
 		<hr>

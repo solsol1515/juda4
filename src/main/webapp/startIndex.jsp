@@ -11,10 +11,12 @@
 </head>
 <body>
 
+<a href="join.do">회원 가입 화면</a><br/>
 
 <a href="index.do">메인 화면</a><br/>
 <a href="intro.do">소개</a><br/>
 <a href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a><br/>
+
 
 <a href="loginForm.do">들어가기</a><br/>
 <a href="join.do">함께하기</a><br/>
