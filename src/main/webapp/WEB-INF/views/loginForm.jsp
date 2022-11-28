@@ -18,6 +18,10 @@
 
 <link href="resources/css/style_login.css" rel="stylesheet" type="text/css">
 
+<script type="text/javascript">
+로그인 아이디가 admin일 경우, 관리자 화면 띄우고 싶은데... 
+</script>
+
 <body>
 
   <div class="parent clearfix">

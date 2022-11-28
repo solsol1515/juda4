@@ -58,8 +58,8 @@
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
 					<li><a class="nav-link" href="cart.do"><img
 							src="resources/images/cart24.png"></a></li>
-					<li><a class="nav-link" href="myPage.do"><img
-							src="resources/images/user24.png"></a></li>
+					<li><a class="nav-link" href="myPage.do">
+					<img src="resources/images/user24.png"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -119,10 +119,7 @@
 						<p>가격이 들어갈 곳입니다.</p>
 						<p>제품에 대한 설명이 들어갈 곳입니다.</p>
 					</div>
-
 				</div>
-				
-				
 				
 			</td>
 			<!--   수정 버튼-->
@@ -134,6 +131,7 @@
 			</td>
 		</tr>
 	</div>
+				<hr width = "100%" color = "red">
 
 
 

@@ -90,8 +90,14 @@ public class JudaController {
   	
   	// 장바구니 내용을 가져오기 (장바구니창 띄우기용)
   	@RequestMapping("cart.do")
-  	public void getCart(Model m, HttpSession session) {
-  		m.addAttribute("cartList", judaService.getCart((String)session.getAttribute("member_id")));
+  	public String getCart(Model m, HttpSession session) {
+  		String id = (String)session.getAttribute("member_id"); 
+  		if(id==null || id.equals("")) {
+  			return "alert";
+  		}else {
+  			 m.addAttribute("cartList", judaService.getCart((String)session.getAttribute("member_id")));
+  			return "cart";
+  		}
   	}
     
 // =======================================================	

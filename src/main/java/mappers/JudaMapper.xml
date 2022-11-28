@@ -58,6 +58,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE m.MEMBER_ID = #{member_id}
 	</select>
    	
+   	<!--  -->
 	<delete id="deleteCart" parameterType="CartRowVO">
 		DELETE FROM Cart 
 		WHERE member_id = #{member_id} AND goods_id = #{goods_id}

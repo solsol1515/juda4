@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport"
@@ -21,7 +21,7 @@
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/admin.css" rel="stylesheet">
-<title>[ 상 품 수 정 2 ]</title>
+<title>[ 상 품 등 록 ]</title>
 </head>
 
 <body>
@@ -49,12 +49,12 @@
                <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
             </ul>
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-               		<li>
-	                  	<c:choose>
-		                  	<c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
-		                  	<c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
-	                 	 </c:choose>
-	                </li>
+               <li>
+		           <c:choose>
+			           <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+			           <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+		           </c:choose>
+	           </li>
                <li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
                <li><a class="nav-link" href="cart.do"><img
                      src="resources/images/cart24.png"></a></li>
@@ -66,23 +66,6 @@
 
    </nav>
    <!-- [끝] 상단 메뉴탭 -->
-
-   <!-- [시작] 상단 탭 아래 -->
-   <div class="hero">
-      <div class="container">
-         <div class="row justify-content-between">
-            <div class="col-lg-5">
-               <div class="intro-excerpt">
-                  <h1>일단공백</h1>
-               </div>
-            </div>
-            <div class="col-lg-7"></div>
-         </div>
-      </div>
-   </div>
-   <br />
-   <br />
-   <!-- [끝] 상단 탭 아래 -->
 
    <!-- 관리자 모드 제목 -->
    <div class="adminmode">
@@ -114,6 +97,7 @@
    <!-- [끝] 상품 관리 카테고리 -->
 
 
+   <form action="">
    <div class="goods-update">
       <tr>
          <div>
@@ -133,7 +117,6 @@
          </div>
 
 
-
          <td>
             <div
                class="input-group mb-3 d-flex align-items-center quantity-container"
@@ -141,19 +124,29 @@
 
                <div class="">
                   <ul class="updateMenu">
+                     <li>제품번호&emsp;<input type="text" size="40"
+                        class="updm_"></li>
+                     <br />
                      <li>제품명&emsp;&emsp;<input type="text" size="40"
                         class="updm_"></li>
                      <br />
                      <li>가격&emsp;&emsp;&emsp;<input type="text" size="40"
                         class="updm_"></li>
                      <br />
-                     <li>제품설명&emsp;<input type="text" class="updm"></li>
-                     <br />
-                     <li>원산지&emsp;&emsp;<input type="text" size="40"
-                        class="updm_"></li>
+                     <li>제품설명&emsp;<textarea type="text" class="updm" rows="10" style="vertical-align:middle; text-align=left;"></textarea></li>
                      <br />
                      <li>도수&emsp;&emsp;&emsp;<input type="text" size="40"
                         class="updm_"></li>
+                     <br />
+                     <li>양&emsp;&emsp;&emsp;&emsp;<input type="text" size="40"
+                        class="updm_"></li>
+                     <br />  
+                     <li>원산지&emsp;&emsp;<input type="text" size="40"
+                        class="updm_"></li>
+                     <br />
+                     <li>주종&emsp;&emsp;&emsp;<input type="text" size="40"
+                        class="updm_"></li>
+                     <br />
                   </ul>
                </div>
             </div>
@@ -162,22 +155,22 @@
 
       </tr>
    </div>
+   </form>
    <br />
    <br />
    <!-- ***************************************************************** -->
    <div class="goods-update2">
       <tr>
-         <!--  상품 수정하기 -->
+         <!--  상품 등록하기 -->
          <td>
             <div
                class="option mb-3 d-flex align-items-center quantity-container">
-               <button type="button" class="goodsBtn">상 품 수 정 하 기</button>
+               <button type="submit" class="goodsBtn">상 품 등 록 하 기</button>
             </div>
          </td>
 
       </tr>
    </div>
-
 
 
 </body>

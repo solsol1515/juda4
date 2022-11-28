@@ -47,8 +47,7 @@
 
          <div class="collapse navbar-collapse" id="navbarsFurni">
             <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-               <li class="nav-item "><a class="nav-link" href="intro.do">우리들의
-                     이야기(소개)</a></li>
+               <li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
                <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
                <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
             </ul>
@@ -71,7 +70,6 @@
    </nav>
    <!-- [끝] 상단 메뉴탭 -->
 
-      
 
       <!-- [시작] 마이페이지 카테고리 -->
       <div class="why-choose-section">

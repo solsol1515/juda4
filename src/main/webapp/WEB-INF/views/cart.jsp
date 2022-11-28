@@ -22,14 +22,14 @@
 	<link href="resources/css/cart.css" rel="stylesheet">
 	<title>장바구니</title>
 
-	<script type="text/javascript">
-		var member_id = '<%=(String)session.getAttribute("member_id")%>';
-		
-		if(member_id == 'null') {
-			alert('로그인해야 이용할 수 있는 페이지입니다.');
-			location.href = "loginForm.do";
-		}
-	</script>
+<script type="text/javascript">
+	var member_id = '<%=(String)session.getAttribute("member_id")%>';
+	
+	if(member_id == 'null') {
+		alert('로그인해야 이용할 수 있는 페이지입니다.');
+		location.href = "loginForm.do";
+	}
+</script>
 	
 </head>
 

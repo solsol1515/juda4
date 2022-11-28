@@ -7,12 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판 만들기용 (juda2 copy)</title>
+<title>취합2</title>
 </head>
 <body>
 
-<a href="join.do">회원 가입 화면</a><br/>
+<script type="text/javascript">location.href="index.do";</script>
 
+<a href="join.do">회원 가입 화면</a><br/>
 <a href="index.do">메인 화면</a><br/>
 <a href="intro.do">소개</a><br/>
 <a href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a><br/>
@@ -20,7 +21,7 @@
 
 <a href="loginForm.do">들어가기</a><br/>
 <a href="join.do">함께하기</a><br/>
-<a href="cart.do">장바구니</a><br/>
+<a href="cart1.do">장바구니</a><br/>
 <a href="myPage.do">나만의 공간</a><hr/>
 <a href="community.do">커뮤니티(게시판)</a><hr/>
 

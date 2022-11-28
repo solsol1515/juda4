@@ -90,7 +90,7 @@
                <div class="col-6 col-md-6 col-lg-3 mb-4">
                   <div class="feature">
                      <div class="icon">
-                        <a href=".do"><img src="resources/images/admin2.png" alt="Image" class="imf-fluid"></a>
+                        <a href="goodsManagement.do"><img src="resources/images/admin2.png" alt="Image" class="imf-fluid"></a>
                      </div><br/>
                      <h5>상품 관리</h5>
                   </div>
@@ -100,7 +100,7 @@
                <div class="col-6 col-md-6 col-lg-3 mb-4">
                   <div class="feature">
                      <div class="icon">
-                        <a href=".do"><img src="resources/images/admin3.png" alt="Image" class="imf-fluid"></a>
+                        <a href="orderManagement.do"><img src="resources/images/admin3.png" alt="Image" class="imf-fluid"></a>
                      </div><br/>
                      <h5>주문 관리</h5>
                   </div>

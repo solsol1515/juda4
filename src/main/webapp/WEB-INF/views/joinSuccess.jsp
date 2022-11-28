@@ -16,6 +16,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
+<link href="resources/css/signin.css" rel="stylesheet">
 
 <title>회원가입 성공</title>
 </head>
@@ -34,11 +35,13 @@
 				<div class="col-md-5" style="float: none; margin:0 auto; text-align:center;">
 				   <h2><strong>酒다의 회원이 되신 것을 축하합니다!</strong></h2>
 				   <br/><br/>
-				   <img src="resources/images/담은.jpg">
+				   <img src="resources/images/담은.jpg" id="welcomeimg">
 				   <br/><br/>
-				   <h5>
-				   		<b>${member_id}</b>님은 회원가입에 성공하셨습니다. <br/>
-				   </h5>
+				   <div>
+					   <h5>
+					   		<b>${member_id}</b>님은 회원가입에 성공하셨습니다. <br/>
+					   </h5>
+				   </div>
 				   <br/>
 					<a href="loginForm.do"><input class="btn" type="button" value="들어가기"></a>
 					&nbsp;&nbsp;

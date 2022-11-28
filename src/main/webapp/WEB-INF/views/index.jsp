@@ -110,7 +110,7 @@
 							<!--[시작] 4 슬라이더  -->
 							<div class="col-12 col-xs-4 col-xs-3 mb-5 mb-xs-0">
 								<a class="product-item" href="cart.html"> <img
-									src="resources/images/사화정미소bx.png" width=100% height=900
+									src="resources/images/시그니처막걸리bx.png" width=100% height=900
 									class="img-fluid product-thumbnail"> </span>
 								</a>
 							</div>

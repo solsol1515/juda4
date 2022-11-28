@@ -68,14 +68,9 @@
 								<h3>우리들의 이야기</h3>
 								<p class="mb-4"> 안녕하세요.<br/>
 															전통주 프로젝트를 맡은 2조 <b>박한솔, 윤희선, 임규황, 임유빈</b>입니다.</p>
-								<p><a href="shop.do" class="btn btn-secondary me-2">구경가기</a>
+								<p><a class="btn btn-secondary me-2" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경가기</a>
 							</div>
 						</div>
-<!-- 						<div class="col-lg-7"> -->
-<!-- 							<div class="hero-img-wrap"> -->
-<!-- 								<img src="images/couch.png" class="img-fluid"> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
 					</div>
 				</div>
 			</div>
@@ -90,9 +85,7 @@
 						<br/><br/><h3 class="section-title"><b> 酒 다 </b></h3><br/><br/>
 					</div>
 				</div>
-				
 						<center><img alt="" src="resources/images/여유1.jpg"></center>
-
 			</div>
 		</div>
 		<!-- End Testimonial Slider -->
@@ -106,13 +99,8 @@
 				<div class="row justify-content-between align-items-center">
 					<div class="col-lg-12">
 						<h4 class="section-title"><br/><br/><br/><center>왜 전통주인가?</center></h4>
-						<p><center>우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다. 우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.
-						우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.
-						우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다.</center></p>
-
+						<p><center>우리가 하고 싶었던 얘기를 넣어주면 될 것 같습니다. </center></p>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
@@ -126,7 +114,6 @@
 				<br/><br/><br/><hr/>
 				<div class="row mb-5">
 					<div class="col-lg-5 mx-auto text-center">
-<!-- 						<h2 class="section-title">전통주 프로젝트 2조</h2> -->
 					</div>
 				</div>
 
@@ -136,9 +123,9 @@
 					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
 						<img src="resources/images/추사1.jpg" class="img-fluid mb-5">
 						<h5 class><span class=""><b>박 한 솔</b></span></h5>
-            <span class="d-block position mb-4">팀원1</span>
-            <p>우리 나라의 다양한 술을 소개하고, 와인같이 세계적으로 더 유명해졌으면 좋겠다라는 생각에서 이 프로젝트를 시작하게 되었습니다. 
-            외국인들에게도 대한민국의 술을 떠올렸을 때 소주라는 대답이 아닌 더 다양한 답변을 듣게 하는 것이 제 목표입니다.</p>
+            			<span class="d-block position mb-4">팀원1</span>
+			            <p>우리 나라의 다양한 술을 소개하고, 와인같이 세계적으로 더 유명해졌으면 좋겠다라는 생각에서 이 프로젝트를 시작하게 되었습니다. 
+			            외국인들에게도 대한민국의 술을 떠올렸을 때 소주라는 대답이 아닌 더 다양한 답변을 듣게 하는 것이 제 목표입니다.</p>
 					</div> 
 					<!-- End Column 1 -->
 

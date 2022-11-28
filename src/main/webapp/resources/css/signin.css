@@ -15,3 +15,9 @@
 .bg-light input {
 	background-color:#918F8F;
 }
+
+.signinSuccess-content .col-md-5 img {
+	width: 800px;
+	height: 450px;
+	align: center;
+}
