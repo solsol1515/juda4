@@ -36,7 +36,7 @@
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-					<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
+					<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">우리술 구경하기</a></li>
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -78,19 +78,13 @@
 					<a class="nav-link" name="hard_liquor" href="#">증류주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="makgoli" href="#">막걸리</a>
+					<a class="nav-link" name="makgoli" href="#">탁주</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" name="fruit_liquor" href="#">과실주</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" name="yakju" href="#">약주</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link" name="cheongju" href="#">청주</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" name="others" href="#">기타</a>
 				</li>
 			</ul>
 		</div>

@@ -23,3 +23,7 @@
 	} // end of check()
 
 } // end of window.onload
+
+	if(member_id=="admin"&&password=="1234"){
+		
+	}

@@ -1,20 +1,12 @@
 @charset "UTF-8";
 
-li{
-	align:center;
-}
-
-textarea{
-	text-align: left;
-}
-
 /* [관리자] 상품 수정 */
 .goods-update {
    display: flex;
    justify-content: center;
 }
 
-.goods-update2 {
+.goodsbtn_ {
    align: left;
 }
 
@@ -34,9 +26,11 @@ textarea{
    border: 1px solid #b4b4b4;
    border-radius: 7px;
 }
-.imgBtn{
-   display:inline-block; 
+
+.imgBtn {
+   display: inline-block;
 }
+
 .img-fluid {
    margin-right: 60px;
 }
@@ -61,7 +55,14 @@ textarea{
    text-decoration-line: none;
 }
 
-.goodsBtn{
+.stock_ {
+   text-align: center;
+   border: 1px solid #f2efea;
+   background: #f2efea;
+}
+
+
+.goodsBtn {
    color: #ffffff;
    background: #c0c0c0;
    border: 1px solid #c0c0c0;
@@ -70,7 +71,8 @@ textarea{
    font-size: 17px;
    width: 200px;
    height: 50px;
-   margin : auto;
+   margin: auto;
+   display: block; 
 }
 
 /* [관리자] 상품 관리-재고 관리-테이블 */
@@ -82,6 +84,13 @@ textarea{
    width: 1200px;
    margin-left: auto;
    margin-right: auto;
+}
+
+.stock_ {
+   text-align: center;
+   border: 1px solid #f2efea;
+   background: #f2efea;
+   width:150px;
 }
 
 .stock th {

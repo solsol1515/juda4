@@ -31,12 +31,17 @@
      <list>
         <value>middleProject.domain.BoardVO</value>
         <value>middleProject.domain.CartRowVO</value>
+        <value>middleProject.domain.CartSelectedRowsVO</value>
         <value>middleProject.domain.CartVO</value>
         <value>middleProject.domain.GoodsTypeVO</value>
         <value>middleProject.domain.GoodsVO</value>
         <value>middleProject.domain.LoginVO</value>
         <value>middleProject.domain.MemberVO</value>
-        <value>middleProject.domain.PayVO</value>
+        <value>middleProject.domain.PayDetailVO</value>
+        <value>middleProject.domain.PayListVO</value>
+        <value>middleProject.domain.PInsertVO</value>
+        <value>middleProject.domain.RankVO</value>
+        <value>middleProject.domain.StockVO</value>
      </list>
   </property>
  </bean>

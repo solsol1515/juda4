@@ -33,6 +33,7 @@
 <link type="text/css" rel="stylesheet"
    href="//img.pay.naver.net/o/wstatic/css/service/front/order/layerpopup.css?1668580192670">
 
+<script src="resources/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="resources/js/pay.js"></script>
 
@@ -66,9 +67,8 @@
 
             <div class="collapse navbar-collapse" id="navbarsFurni">
                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                  <li class="nav-item "><a class="nav-link" href="intro.do">우리들의
-                        이야기(소개)</a></li>
-                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">구경하기</a></li>
+                  <li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
+                  <li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">우리술 구경하기</a></li>
                   <li><a class="nav-link" href="community.do">우리들의 공간</a></li>
                </ul>
                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -90,6 +90,7 @@
 
 <!-- [시작] 주문 / 결제 전체 -->
 		<div id="container">
+		
 			<!-- content -->
 			<div id="order" class="order_sc _root _cartDiv">
 
@@ -107,13 +108,16 @@
 				<br />
 				<!-- [끝] 주문/ 결제  -->
 				
+				
 				<!-- 주문 상품 카테고리(상품명, 배송비, 수량, 상품금액) 끝-->
 				<div class="order_content">
 					<div class="product_area">
+					
 						<table class="tb_products">
 							<caption>주문내역</caption>
 							<colgroup>
-								<col width="550">
+								<col width="250">
+								<col width="300">
 								<col width="135">
 								<col width="135">
 								<col width="135">
@@ -121,7 +125,7 @@
 							</colgroup>
 							<thead class="point_plus">
 								<tr>
-									<th scope="col" class="product">상품명</th>
+									<th scope="col" colspan="2" class="goods">상품명</th>
 									<th scope="col">배송비</th>
 									<th scope="col">수량</th>
 									<th scope="col" class="col_price">상품금액</th>
@@ -130,85 +134,59 @@
 							<!-- 주문 상품 카테고리(상품명, 배송비, 수량, 상품금액) 끝-->
 
 
-
-							<!-- 첫번째 상품 시작-->
-							<tr>
-								<!--  상품이미지 -->
-								<td><span class="bdr"></span>
-									<div class="product_info">
-										<a class="product_thmb" target="_blank"> <span
-											class="goods"></span><img src="resources/images/스윗마마결제.jpg"
-											width=100 height=100 alt="" width="92" height="92">
-										</a>
-
+							<!-- 상품 목록 -->
+							<c:if test="${payItemList!=null}">
+								<c:forEach items="${payItemList}" var="vo">
+									<tr>
+										<!--  상품이미지 -->
+										<td><span class="bdr"></span>
+											<div class="goods_info">
+												<a href="sangse.do?goods_id=${vo.goods_id}">
+													<img src="resources/images/${vo.img_file}" width=100 height=100 alt="" width="92" height="92">
+												</a>
+											</div>
+										</td>
+		
 										<!--  상품명 -->
-										<div class="product_dsc">
-											<div class="additional_status"></div>
-											<a
-												href="https://shopping.naver.com/outlink/itemdetail/6918605682"
-												target="_blank" class="product_name"> <strong>상품명을
-													적어주세요.</strong>
-											</a>
-										</div>
-										<span class="vm"></span>
-									</div></td>
-
-								<!--  배송비 -->
-								<td rowspan="1"><span class="deli_fee"><span
-										class="sp_order ico_deli"></span><span
-										class="sum _deliveryPrice2022111882962433">3,000원<a
-											href="#"></a> <!--N=a:ord.deldetail--></span><span
-										class="_deliveryPriceText2022111882962433"></span></span></td>
-
-								<!--  수량 -->
-								<td>1개</td>
-
-								<!--  상품 금액 -->
-								<td class="col_price"><strong><em
-										class="_productOrderPayAmt2022111839485933">32,000</em>원</strong></td>
-							</tr>
-							<!-- 첫번째 상품 끝-->
-
-
-							<!-- 두번째 상품 시작-->
-							<tr>
-								<!--  상품이미지 -->
-								<td><span class="bdr"></span>
-									<div class="product_info">
-										<a class="product_thmb" target="_blank"> <span
-											class="goods"></span><img src="resources/images/스윗마마결제.jpg"
-											width=100 height=100 alt="" width="92" height="92">
-										</a>
-
-										<!--  상품명 -->
-										<div class="product_dsc">
-											<div class="additional_status"></div>
-											<a
-												href="https://shopping.naver.com/outlink/itemdetail/6918605682"
-												target="_blank" class="product_name"> <strong>상품명을
-													적어주세요.</strong>
-											</a>
-										</div>
-										<span class="vm"></span>
-									</div></td>
-
-								<!--  배송비 -->
-								<td rowspan="1"><span class="deli_fee"><span
-										class="sp_order ico_deli"></span><span
-										class="sum _deliveryPrice2022111882962433">3,000원<a
-											href="#"></a> <!--N=a:ord.deldetail--></span><span
-										class="_deliveryPriceText2022111882962433"></span></span></td>
-
-								<!--  수량 -->
-								<td>1개</td>
-
-								<!--  상품 금액 -->
-								<td class="col_price"><strong><em
-										class="_productOrderPayAmt2022111839485933">32,000</em>원</strong></td>
-							</tr>
-							<!-- 두번째 상품 끝-->
+										<td style="text-align:left;">
+											<div class="goods_dsc">
+												<a href="sangse.do?goods_id=${vo.goods_id}" target="_blank" class="goods_name">
+													<strong>${vo.goods_name}</strong>
+												</a>
+											</div>
+											<input type="hidden" class="goods_id" value="${vo.goods_id}">
+										</td>
+		
+										<!--  배송비 -->
+										<td rowspan="1">
+											<span class="deli_fee">
+												<span class="sp_order ico_deli"></span>
+												<span class="sum _deliveryPrice2022111882962433">${vo.delivery_charge}원
+													<a href="#"></a> <!--N=a:ord.deldetail-->
+												</span>
+												<span class="_deliveryPriceText2022111882962433"></span>
+											</span>
+										</td>
+		
+										<!--  수량 -->
+										<td>${vo.c_amount}개</td>
+		
+										<!--  상품 금액 -->
+										<td class="col_price">
+											<strong><em class="_productOrderPayAmt2022111839485933">${vo.price*vo.c_amount}</em>원</strong>
+										</td>
+									</tr>
+									<input type="hidden" class="prices" value="${vo.price*vo.c_amount}">
+									<input type="hidden" class="deliveries" value="${vo.delivery_charge}">
+									<input type="hidden" class="goods_ids" name="goods_id" value="${vo.goods_id}">
+									<input type="hidden" class="c_amount" name="c_amount" value="${vo.c_amount}">
+								</c:forEach>
+							</c:if>
+							<!-- 상품 목록 끝 -->
+							
 							</tbody>
 						</table>
+						
 					</div>
 
 
@@ -222,44 +200,48 @@
 					<!-- [시작] 배송지 정보  -->
 					<div class="destination_wrap">
 						<div class="deliver_wrap">
-							<form action="payOrder.do" id="payForm" method="get">
+							<form action="" id="payForm" method="get">
 								<h4>
 									<span class="blind">배송지정보</span>
 								</h4>
 
 								<ul class="addr_lists _deliveryPlaces _deliveryPlaces_0">
-									<li>배송지명&emsp;&emsp;&emsp;<input type="text" size=25
-										name="delivery_name"></li>
+									<li>배송지명&emsp;&emsp;&emsp;
+										<input type="text" size=25 id="delivery_name">
+									</li>
 									<br />
-									<li>수령인&emsp;&emsp;&emsp;&emsp;<input type="text" size=25
-										name="receiver"></li>
+									<li>수령인&emsp;&emsp;&emsp;&emsp;
+										<input type="text" size=25 id="receiver">
+									</li>
 									<br />
-									<li>연락처&emsp;&emsp;&emsp;&nbsp;&nbsp; <select size="1"
-										name="p_num1" class="telSelect">
+									<li>연락처&emsp;&emsp;&emsp;&nbsp;&nbsp;
+										<select size="1" id="p_num1" class="telSelect">
 											<option value="1">010</option>
 											<option value="2">011</option>
 											<option value="3">016</option>
 											<option value="4">017</option>
 											<option value="5">02</option>
-									</select> &nbsp;-&nbsp;<input type="text" size=10 name="p_num2">&nbsp;-&nbsp;<input
-										type="text" size=10 name="p_num3"></li>
+										</select> &nbsp;-&nbsp;
+										<input type="text" size=10 id="p_num2">&nbsp;-&nbsp;
+										<input type="text" size=10 id="p_num3">
+									</li>
 									<br />
-									<li>배송지&emsp;&emsp;&emsp;&emsp;<input type="text"
-										size="10" id="addra" name="postcode">&nbsp;
-										<button type="button" class="addr_btn" id="addr_btn">우편번호</button></li>
+									<li>배송지&emsp;&emsp;&emsp;&emsp;
+										<input type="text" size="10" id="postcode" name="postcode">&nbsp;
+										<button type="button" class="addr_btn" id="addr_btn">우편번호</button>
+									</li>
 									<br /> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
-									<input type="text" size="50" id="addrb" name="addr">
+									<input type="text" size="50" id="addr" name="addr">
 									<br />
 									<br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
-									<input type="text" size="50" id="addrc" name="addr_detail">
+									<input type="text" size="50" id="addr_detail" name="addr_detail">
 									<br />
 
-									<li>배송메모&emsp;&emsp;&emsp;<input type="text" size=45
-										name="delivery_memo" class="dMemo"></li>
+									<li>배송메모&emsp;&emsp;&emsp;
+										<input type="text" size=45 id="delivery_memo" name="delivery_memo" class="dMemo">
+									</li>
 									<br />
 								</ul>
-								<input type="hidden" value="10" name="goods_id" /> <input
-									type="hidden" value="" name="o_sum" />
 							</form>
 						</div>
 
@@ -271,10 +253,10 @@
 							<h5>주문자 정보</h5>
 							<br />
 							<ul class="user_info">
-								<li>윤희선</li>
-								<li class="_telNoHighlight "><span class="_memberTelNumber">010-****-****</span>
+								<li>${member.NAME}</li>
+								<li class="_telNoHighlight "><span class="_memberTelNumber">${member.TEL}</span>
 									<!--N=a:ord.modifyphone--></li>
-								<li><span class="_memberEmailAddress">******@*****.***</span></li>
+								<li><span class="_memberEmailAddress">${member.EMAIL}</span></li>
 							</ul>
 							<hr />
 							<ul class="info_dsc">
@@ -283,9 +265,9 @@
 										정보로 결제관련 정보가 제공됩니다.<br>정확한 정보로 등록되어있는지 확인해주세요.
 								</span></li>
 							</ul>
-							<input type="hidden" name="order.memberName" value="윤희선">
-							<input type="hidden" name="order.memberCellPhoneNo"
-								value="010-5**7-3**9">
+							<input type="hidden" name="order.memberName" value="${member.NAME}">
+							<input type="hidden" name="order.memberCellPhoneNo" value="${member.TEL}">
+							<input type="hidden" name="order.memberAddress" value="${member.EMAIL}">
 						</div>
 						<span class="shdw_left"></span> <span class="shdw_right"></span>
 					</div>
@@ -310,29 +292,29 @@
 							<li class="paymethod _payMethodTab _naverPaymentsBankTab">
 								<div class="header tooltip_area">
 
-									<label><input type="radio" name="pay" value="계좌이체" class="bankS">  계좌이체</label><em
-										class="_generalPaymentAmount payment_price"></em> <select
-										size="1" class="bankSelect">
-										<option value="1">농협은행</option>
-										<option value="2">국민은행</option>
-										<option value="3">신한은행</option>
-										<option value="4">하나은행</option>
-										<option value="5">기업은행</option>
-										<option value="6">카카오뱅크</option>
+									<label><input type="radio" name="pay" value="계좌이체" class="bankS">  계좌이체</label>
+									<em	class="_generalPaymentAmount payment_price"></em>
+									<select	size="1" class="bankSelect">
+										<option value="농협은행">농협은행</option>
+										<option value="국민은행">국민은행</option>
+										<option value="신한은행">신한은행</option>
+										<option value="하나은행">하나은행</option>
+										<option value="기업은행">기업은행</option>
+										<option value="카카오뱅크">카카오뱅크</option>
 									</select>
 								</div>
 							</li>
 
 							<li class="paymethod _payMethodTab _naverPaymentsCardTab">
 								<div class="header">
-									<label><input type="radio" name="pay" value="카드결제" class="bankS">  카드결제</label><em class="_generalPaymentAmount payment_price"></em> <select
+									<label><input type="radio" name="pay" value="카드결제" class="bankS" checked="checked">  카드결제</label><em class="_generalPaymentAmount payment_price"></em> <select
 										size="1" class="bankSelect">
-										<option value="1">농협은행</option>
-										<option value="2">국민은행</option>
-										<option value="3">신한은행</option>
-										<option value="4">하나은행</option>
-										<option value="5">기업은행</option>
-										<option value="6">카카오뱅크</option>
+										<option value="농협은행">농협은행</option>
+										<option value="국민은행">국민은행</option>
+										<option value="신한은행">신한은행</option>
+										<option value="하나은행">하나은행</option>
+										<option value="기업은행">기업은행</option>
+										<option value="카카오뱅크">카카오뱅크</option>
 									</select>
 								</div>
 
@@ -375,21 +357,14 @@
 						<div class="sum">
 							<strong class="price_sum_title">주문금액</strong>
 							<p class="price_sum_detail">
-								<em class="_totalPayPrice">38,000원</em>
+								<em class="_totalPayPrice"></em>
 							</p>
 						</div><br/>
 						
-<!-- 						<div class="calc_list"> -->
-<!-- 							<li><strong class="goodsPrice">상품금액</strong> -->
-<!-- 								<p> -->
-<!-- 									<em class="_totalOrderPrice">35,000원</em> -->
-<!-- 								</p></li> -->
-<!-- 								</div> -->
-
 						<div class="sum1">
 							<strong class="goodsPrice">상품금액</strong>
 							<p class="price_sum1_detail">
-								<em class="_totalOrderPrice">35,000원</em>
+								<em class="_totalOrderPrice"></em>
 							</p>
 						</div>
 						<br />
@@ -397,7 +372,7 @@
 						<div class="sum2">
 							<strong class="deliPrice">배송비</strong>
 							<p class="price_sum2_detail">
-								<em class="_totalDeliveryFee">3,000원</em>
+								<em class="_totalDeliveryFee"></em>
 							</p>
 						</div><br/><br/>
 						
@@ -405,26 +380,12 @@
 						<div class="sum3">
 							<strong class="price_sum_title">총 결제 금액</strong>
 							<p class="price_sum3_detail">
-								<em class="_totalPayPrice">38,000원</em>
+								<em class="_totalPayPrice"></em>
 							</p>
 						</div>
 						<br />
-
-
-						<!-- 						<div> -->
-<!-- 							<li><strong class="deliPrice">배송비</strong> -->
-<!-- 								<p> -->
-<!-- 									<dummy class="_totalDeliveryFeeSign"></dummy> -->
-<!-- 									<em class="_totalDeliveryFee">3,000원</em> -->
-<!-- 								</p></li><br/> -->
-<!-- 								</div> -->
-<!-- 						<hr /> -->
+						<input type="hidden" id="p_sum" name="p_sum" value="">
 						
-<!-- 						<div><strong class="price_sum_title">총 결제 금액</strong> -->
-<!-- 						<p class="price_sum_detail"> -->
-<!-- 							<em class="_totalPayPrice">38,000원</em> -->
-<!-- 						</p> -->
-<!-- 						</div> -->
 					</div>
 				</div>
 				<!--  [끝] 결제 수단과 결제 상세 -->
@@ -440,18 +401,50 @@
 				<!-- [시작] 결제하기 버튼 -->
 				<div class="payment_agree"
 					style="display: flex; justify-content: center;">
-					<button class="paybtn" onclick="paybtn()">결제하기</button>
+					<button class="paybtn" id="payBtn">결제하기</button>
 					<br>
-					<script>
-						function paybtn() {
-							alert("결제가 완료되었습니다.");
-							$('#payForm').submit();
-						}
-					</script>
 				</div>
 				<!-- [끝] 결제하기 버튼 -->
 			</div>
 			<!-- [끝] 주문 / 결제 전체 -->
+			
+			
+		<!-- Modal: 결제 확인 -->
+		<div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div style="height:10px;"></div>
+		      <div class="modal-body">
+		      	<div class="row">
+		      		<div class="col-5">
+		      			<img src="resources/images/루피2.png">
+		      		</div>
+		      		<div class="col-7" style="text-align:center;">
+		      			<br/><br/>
+		      			<h4>결제하시겠습니까?</h4>
+		      			<br/>
+		      			<h6></h6>
+		      			<h6></h6>
+		      			<h6></h6>
+		      		</div>
+		      	</div>
+		        <!-- <img src="resources/images/cart.png" height=70px width=70px>&nbsp;&nbsp;&nbsp;&nbsp;
+		        <span style="font-size:22px; font-weight:bold;">선택하신 상품을 장바구니에 담았습니다.</span> -->
+		      </div>
+		      <div style="height:20px;"></div>
+		      <div class="modal-buttons" style="text-align:center;">
+		        <button type="button" class="btn btn-sangse">확인</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        <button type="button" class="btn btn-sangse" data-bs-dismiss="modal">취소</button>
+		      </div>
+		      <div style="height:20px;"></div>
+		      <div class="modal-footer" style="height:50px;"></div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Modal: 결제 확인 끝 -->
          
          
          <!-- Start Footer Section -->
@@ -507,9 +500,6 @@
 			</div>
 		</footer>
 		<!-- End Footer Section -->	
-         
-         
-         
          
 </body>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

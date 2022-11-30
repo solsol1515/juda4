@@ -35,7 +35,7 @@
 				<div class="col-md-5" style="float: none; margin:0 auto; text-align:center;">
 				   <h2><strong>酒다의 회원이 되신 것을 축하합니다!</strong></h2>
 				   <br/><br/>
-				   <img src="resources/images/담은.jpg" id="welcomeimg">
+				   <img src="resources/images/담은.jpg" id="welcomeimg" style="margin:0 -300px;">
 				   <br/><br/>
 				   <div>
 					   <h5>
@@ -51,7 +51,7 @@
 			<!-- footer 정보 끝 -->
 
 		</div>
-	</section>
+	</section>-
 	<!-- End signinSuccess Section -->
 	
 	<!-- Start Footer Section -->

@@ -58,7 +58,11 @@ $(function(){
 
     $('.input-group').on('click', '.decrease', function(e) {
         decrementValue(e);
-        updateCart(e);
+        
+        var currentVal = parseInt(parent.find('input.quantity-amount').val());
+        if(currentVal>1)
+        	updateCart(e);
+        	
         setTotalInfo();
     });
     
@@ -74,15 +78,13 @@ $(function(){
 		
 		let am = parseInt($(e.target).val());
 		let gd = $(e.target).closest('tr').find('.individual_goods_id').val();
-		let md = $('.member_id').val();
 		
 		$.ajax({
 			type : 'post',
-			url : 'updateCart.do',
+			url 	: 'updateCart.do',
 			data : {
 				c_amount:am,
 				goods_id:gd,
-				member_id:md
 			},
 			success : function(result){
 				console.log(result);
@@ -102,7 +104,6 @@ $(function(){
 //-----------------------------------------------------------------------------------
 	
 	// 삭제 버튼
-	
 	$('.delete-btn').on('click', function(e) {
 		
 		let gd = $(e.target).closest('tr').find('.individual_goods_id').val();
@@ -124,11 +125,11 @@ $(function(){
 	function setTotalInfo(){
 		
 		let price = 0;						// 가격
-		let amount = 0;						// 수량
+		let amount = 0;				// 수량
 		
-		let totalPrice = 0;					// 총 가격
-		let totalDeliveryPrice = 0;			// 총 배송비
-		let finalTotalPrice = 0; 			// 최종 가격(총 가격 + 배송비)
+		let totalPrice = 0;				// 총 가격
+		let totalDeliveryPrice = 0;	// 총 배송비
+		let finalTotalPrice = 0; 		// 최종 가격(총 가격 + 배송비)
 	
 		
 		$(".cart_info_td").each(function(index, element){
@@ -159,5 +160,25 @@ $(function(){
 	
 	
 //-----------------------------------------------------------------------------------
+/***** 결제하기를 클릭했을 때 *******/
+// ------------------------------------------------------------------------------
 
+	// 결제하기 버튼
+	$('#payBtn').click(function(){
+	
+		// 체크된 것들만 param에 추가하기
+		var param = "";
+		$(".individual_input_check:checked").each(function() {
+			if(param=="") {
+				param += "goods_ids=" + $(this).parent().find(".individual_goods_id").val();
+			} else {
+				param += "&goods_ids=" + $(this).parent().find(".individual_goods_id").val();
+			}
+		});
+		
+		
+		location.href="payCart.do?" + param;
+		
+		
+	});
 });

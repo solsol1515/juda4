@@ -1130,13 +1130,18 @@ a.more {
 		border-radius: 5px;
 		text-align: center;
 		color: #ffffff;
-		transform: translate(-0%, -1117%);
+		transform: translate(-2%, -1460%);
 		vertical-align: middle;
-		z-index: 0;
-		-webkit-transition: .2s all ease;
-		-o-transition: .2s all ease;
-		transition: .2s all ease;
+		z-index: 0px;
+		-webkit-transition: .2s all ease !important; 
+		-o-transition: .2s all ease !important;
+		transition: .2s all ease !important;
 }
+	.rank_text p{
+		text-align: center;
+		vertical-align: middle;
+	}
+
 
 /* [메인] 주간순위 전체 */
 .product-section .product-item {

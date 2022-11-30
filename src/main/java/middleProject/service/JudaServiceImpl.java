@@ -1,5 +1,6 @@
 package middleProject.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -9,19 +10,26 @@ import org.springframework.stereotype.Service;
 
 import middleProject.dao.JudaDAO;
 import middleProject.domain.CartRowVO;
+import middleProject.domain.CartSelectedRowsVO;
 import middleProject.domain.CartVO;
 import middleProject.domain.GoodsTypeVO;
 import middleProject.domain.GoodsVO;
 import middleProject.domain.LoginVO;
 import middleProject.domain.MemberVO;
-import middleProject.domain.PayVO;
+import middleProject.domain.PayListVO;
+import middleProject.domain.RankVO;
+import middleProject.domain.StockVO;
 
 @Service("judaService")
 public class JudaServiceImpl implements JudaService {
 	
 	@Autowired
 	private JudaDAO judaDAO;
-
+	   /* [ 메인 ] 주간 순위 */
+	   public List<RankVO> selectRank () {
+	      return judaDAO.selectRank();
+	   }
+	
 // =======================================================		
 
 	/* [ 로그인 및 회원가입 ] */
@@ -30,15 +38,12 @@ public class JudaServiceImpl implements JudaService {
 		return judaDAO.selectLogin(vo);
 	} // end of selectAllLogin()
 	
-	// 로그인???
-	public Integer selectLogin(LoginVO vo, HttpSession session) {
-		Integer name = judaDAO.selectLogin(vo);
-		if(name != null) { // 세션 변수 저장
-			session.setAttribute("id", vo.getMember_id());
-			session.setAttribute("name", name);
-		}
-		return name;
-	}
+	
+//	  // 로그인??? public Integer selectLogin(LoginVO vo, HttpSession session) {
+//	  Integer name = judaDAO.selectLogin(vo); if(name != null) { // 세션 변수 저장
+//	  session.setAttribute("id", vo.getMember_id()); session.setAttribute("name",
+//	  name); } return name; }
+	 
 	
 	// 가입하기
 	public Integer insertMember(MemberVO vo) {
@@ -54,7 +59,7 @@ public class JudaServiceImpl implements JudaService {
 	}
 	
 	// 상품상세 띄우기
-	public GoodsVO getGoods(String goods_id) {
+	public GoodsVO getGoods(Integer goods_id) {
 		return judaDAO.getGoods(goods_id);
 	}
 	
@@ -96,11 +101,51 @@ public class JudaServiceImpl implements JudaService {
 	}
 		
 	// 구매하기
-	public void insertOrder(PayVO payVo) {
+	public void insertOrder(PayListVO payVo) {
 		judaDAO.insertOrder(payVo);
 	}
-	
-	
-}
-
 // =======================================================		
+	/* [ 관리자 모드 ] */
+
+	   // 상품 등록 버튼
+	   public Integer insertGoods(GoodsVO vo) {
+	      return judaDAO.insertGoods(vo);
+	   }
+
+	   // 재고 관리 정보 가져오기
+	   public List<StockVO> selectStock () {
+	      return judaDAO.selectStock();
+	   }
+	   
+// =======================================================		
+		/* [ 결제창 ] */
+
+		// 카트의 상품 목록을 결제창에 띄우기
+		public List<CartVO> getPayCart(CartSelectedRowsVO vo) {
+			return judaDAO.getPayCart(vo);
+		}
+
+		// 결제할 상품을 바로 결제창에 띄우기
+		public CartVO getPayOne(String member_id) {
+			return judaDAO.getPayOne(member_id);
+		}
+
+		// 회원 정보를 결제창에 올리기
+		public HashMap<String, String> getMember(String member_id) {
+			return judaDAO.getMember(member_id);
+		}
+		
+		// 구매하기 (주문 테이블에 정보 입력)
+		public void insertPayList(PayListVO payVo) {
+			judaDAO.insertPayList(payVo);
+		}
+
+		// 구매하기 (주문상세 테이블에 정보 입력)
+		public void insertPay_Detail(CartRowVO crVO) {
+			judaDAO.insertPay_Detail(crVO);
+		}
+
+		public void deletePayCart(CartSelectedRowsVO vo) {
+			judaDAO.deletePayCart(vo);
+		}	
+}

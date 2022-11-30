@@ -1,5 +1,7 @@
 package middleProject.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,17 +17,6 @@ public class AjaxRestController {
 	@Autowired
 	private JudaService judaService;
 
-// =======================================================		
-	/* [로그인] */
-
-	// 로그인 중복 체크
-	@PostMapping(value="checkId.do") //, produces = "application/text; charset=UTF-8")
-	public Integer checkId(LoginVO vo) {
-		System.out.println(">>>> "+vo);
-		return 1;
-	}
-
-// =======================================================	
 
 	
 // =======================================================	
@@ -45,8 +36,20 @@ public class AjaxRestController {
 		
 		// 장바구니의 상품의 수량만 바꾸기	(장바구니창에도 사용)
 		@PostMapping("updateCart.do")
-		public void updateCart(CartRowVO vo) {
+		public void updateCart(CartRowVO vo, HttpSession session) {
+				String id = (String) session.getAttribute("member_id");
+				vo.setMember_id(id);
 				judaService.updateCart(vo);
 		}
 	
-}
+}// end of controller
+
+// =======================================================		
+/* [로그인] */
+
+// 로그인 중복 체크
+//	@PostMapping(value="checkId.do") //, produces = "application/text; charset=UTF-8")
+//	public Integer checkId(LoginVO vo) {
+//		System.out.println(">>>> "+vo);
+//		return 1;
+//	}

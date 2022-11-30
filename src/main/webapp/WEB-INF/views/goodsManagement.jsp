@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 
 <!doctype html>
 <html lang="en">
@@ -28,7 +28,7 @@
 		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
 		arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do"> <img
+			<a class="navbar-brand" href="index.html"> <img
 				src="resources/images/로고.png" alt="logo"></a>
 
 			<button class="navbar-toggler" type="button"
@@ -47,11 +47,11 @@
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<li>
-	                  	<c:choose>
-		                  	<c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
-		                  	<c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
-	                  	</c:choose>
-	                </li>
+			          <c:choose>
+				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
+				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
+			          </c:choose>
+		          	</li>
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
 					<li><a class="nav-link" href="cart.do"><img
 							src="resources/images/cart24.png"></a></li>
@@ -62,8 +62,12 @@
 		</div>
 
 	</nav>
+	<br/>
+	<br/>
 	<!-- [끝] 상단 메뉴탭 -->
 
+
+      
 
       <!-- [시작] 관리자 메인페이지 -->
       <div class="why-choose-section">
@@ -94,7 +98,7 @@
                <div class="col-6 col-md-6 col-lg-3 mb-4">
                   <div class="feature">
                      <div class="icon">
-                        <a href="goodsStock.do"><img src="resources/images/goodsMngm3.png" alt="Image" class="imf-fluid"></a>
+                        <a href="selectStock.do"><img src="resources/images/goodsMngm3.png" alt="Image" class="imf-fluid"></a>
                      </div><br/>
                      <h5>재고 관리</h5>
                   </div>
@@ -107,6 +111,7 @@
       <!-- [끝] 관리자 메인페이지 -->
 
     
+
       
    </body>
 
