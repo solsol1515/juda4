@@ -22,7 +22,7 @@ $(function(){
 	// 휴대폰 번호 정규식
 	var phoneJ = /^01([0|1|6|7|8|9]?)?([0-9]{3,4})?([0-9]{4})$/;
 	
-	
+	/*
 	$('.bg-light input[name=member_id]').focusout(function(){
 		
 		if($('.bg-light input[name=member_id]').val()==''){
@@ -90,7 +90,7 @@ $(function(){
          }//else if
 		
 	});
-	
+	*/
 	
 	$('.bg-light input[type=password]').focusout(function(){
     	

@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import middleProject.domain.AdminLoginVO;
 import middleProject.domain.CartRowVO;
 import middleProject.domain.CartSelectedRowsVO;
 import middleProject.domain.CartVO;
@@ -52,7 +53,7 @@ public class JudaController {
 	public void insertMember(MemberVO vo, Model m) {
 		vo.setTel(vo.getP_num1()+"-"+vo.getP_num2()+"-"+vo.getP_num3());
 		vo.setBirth(vo.getYy()+"-"+vo.getMm()+"-"+vo.getDd());
-
+		
 		m.addAttribute("result", judaService.insertMember(vo));
 		m.addAttribute("member_id", vo.getMember_id()); // ## 한 줄 추가한 거 맞는지 확인 !!! 회원가입 축하할 때 아이디 명시하기 위해서
 	}
@@ -67,21 +68,18 @@ public class JudaController {
        Integer result = judaService.selectLogin(vo);
        
        if(result == 1) {		// 로그인 성공 시
-	          session.setAttribute("member_id",  vo.getMember_id());
-	          if( vo.getMember_id().equals("admin")) { // 관리자 아이디로 로그인 시, 관리자 메인 화면으로 이동
-	        	  return "redirect:admin.do";
-	          }
-	          	  return "index"; // 일반 회원 로그인 시 메인 화면으로 이동
-       		}else { // 로그인 실패 시
-       			return "loginForm";
-       		} // end of else() 
-    } // end of selectAllLogin()
+    	   session.setAttribute("member_id",  vo.getMember_id());
+	       return "redirect:/index.do";
+       }else { // 로그인 실패 시
+    	   return "loginForm";
+       } // end of else() 
+    } // end of selectLogin()
     
     // 로그아웃
     @RequestMapping("logOut.do")
     public String logOut(HttpSession session) {
     	session.invalidate();
-    	return "index";
+    	return "redirect:/index.do";
     }
     
 // =======================================================   

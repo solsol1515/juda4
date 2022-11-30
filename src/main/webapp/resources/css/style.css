@@ -594,9 +594,9 @@ a.more {
 	}
 	.testimonial-section {
 		padding: 3rem 0 7rem 0;
+		text-align: center;
 	}
 	.testimonial-section .section-title img{
-	
 	position: center;
 	}
 	.testimonial-slider-wrap {

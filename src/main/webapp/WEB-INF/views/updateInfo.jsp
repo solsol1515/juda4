@@ -30,7 +30,7 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
-						<li class="active"><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">우리술 구경하기</a></li>
+						<li class=""><a class="nav-link" href="shop.do?goods_type=전체&goods_sort=like_count DESC">우리술 구경하기</a></li>
 						<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -65,7 +65,7 @@
             		<form action="joinSuccess.do" method='post' id="usercheck">
 		                <div class="form-group">
 		               		<label for="member_id" class="form-label mt-4">아이디</label>
-		                    <input type="text" class="form-control" id="member_id" name="member_id" value=${member_id} readonly>
+		                    <input type="text" class="form-control" id="member_id" name="member_id" value="${member_id}" readonly>
 		                    <a></a>
 		                    <div class="eheck_font" id="id_check"></div>
 		                </div>
@@ -82,13 +82,13 @@
 						</div>
 		                <div class="form-group">
 		               		<label for="name" class="form-label mt-4">이름</label>
-		                    <input type="text" class="form-control" id="name" name="name" value=${name} readonly>
+		                    <input type="text" class="form-control" id="name" name="name" value="${name}" readonly>
 		                </div>
 		                <div class ="form-group row">
 		                	<label class="form-label mt-4">생년월일</label>
 		                	<div class="col" id="bir_yy">
 		                		<span class="ps_box">
-		                			<input type="text" class="form-control" id="yy" name="yy" value=${yy} readonly>
+		                			<input type="text" class="form-control" id="yy" name="yy" value="${yy}" readonly>
 		                		</span>
 		                	</div>
 		                	<div class="col" id="bir_mm">
@@ -118,7 +118,7 @@
 		                </div>
 					    <div class="form-group">
 					      <label for="gender" class="form-label mt-4" readonly>성별</label>
-					      <select class="form-select" id="gender" name="gender" readonly>
+					      <select class="form-select" id="gender" name="gender">
 					        <option>남자</option>
 					        <option>여자</option>
 					      </select>

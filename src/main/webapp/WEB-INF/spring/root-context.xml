@@ -29,6 +29,7 @@
   <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
   <property name="typeAliases">
      <list>
+        <value>middleProject.domain.AdminLoginVO</value>
         <value>middleProject.domain.BoardVO</value>
         <value>middleProject.domain.CartRowVO</value>
         <value>middleProject.domain.CartSelectedRowsVO</value>

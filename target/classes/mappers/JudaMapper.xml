@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		VALUES (#{member_id}, #{password}, #{name}, #{gender}, #{tel}, #{email}, #{birth}, sysdate, #{agree_email}, #{agree_sns})
 	</insert>
 
-	<select id="selectLogin" parameterType="LoginVO" resultType="int">
+	<select id="selectLogin" parameterType="LoginVO" resultType="Integer">
 		SELECT			count(*)
 		FROM			Member
 		WHERE			member_id = #{member_id} AND password = #{password}

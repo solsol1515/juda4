@@ -6,9 +6,9 @@
 	
 	function check(){
 	
-		if(document.form.member_id.value==""){
+		if(document.form.admin_id.value==""){
 			alert("ID를 입력하세요.")
-			document.form.member_id.focus();
+			document.form.admin_id.focus();
 			return false;
 		}
 		

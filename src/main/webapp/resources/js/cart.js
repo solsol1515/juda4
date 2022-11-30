@@ -59,10 +59,12 @@ $(function(){
     $('.input-group').on('click', '.decrease', function(e) {
         decrementValue(e);
         
+        var parent = $(e.target).closest('div');
         var currentVal = parseInt(parent.find('input.quantity-amount').val());
-        if(currentVal>1)
+        if(currentVal>=1) {
         	updateCart(e);
-        	
+        }
+        
         setTotalInfo();
     });
     
@@ -124,22 +126,22 @@ $(function(){
 	/* 총 주문 정보 세팅(배송비, 총 가격, 수량, 최종 가격) */
 	function setTotalInfo(){
 		
-		let price = 0;						// 가격
-		let amount = 0;				// 수량
+		let price 					= 0;	// 가격
+		let amount 				= 0;	// 수량
 		
-		let totalPrice = 0;				// 총 가격
-		let totalDeliveryPrice = 0;	// 총 배송비
-		let finalTotalPrice = 0; 		// 최종 가격(총 가격 + 배송비)
+		let totalPrice 				= 0;	// 총 가격
+		let totalDeliveryPrice  = 0;	// 총 배송비
+		let finalTotalPrice 		= 0; 	// 최종 가격(총 가격 + 배송비)
 	
 		
 		$(".cart_info_td").each(function(index, element){
 		
-			if($(element).find(".individual_input_check").is(":checked") === true) {			// 체크여부
+			if($(element).find(".individual_input_check").is(":checked") === true) {							// 체크 여부
 				
-				price = parseInt($(element).find(".individual_price_input").val());							// 가격
+				price = parseInt($(element).find(".individual_price_input").val());									// 가격
 				amount = parseInt($(element).parent("tr").find(".quantity-amount").val());					// 수량
 				
-				totalPrice += price * amount;																// 총 가격
+				totalPrice += price * amount;																						// 총 가격
 				totalDeliveryPrice += parseInt($(element).find(".individual_deliveryPrice_input").val());	// 총 배송비
 			
 			}
@@ -153,7 +155,7 @@ $(function(){
 		// 총 가격
 		$(".totalPrice_span").text(totalPrice.toLocaleString());
 		// 배송비
-		$(".totalDeliveryPrice").text(totalDeliveryPrice);	
+		$(".totalDeliveryPrice").text(totalDeliveryPrice.toLocaleString());	
 		// 최종 가격(총 가격 + 배송비)
 		$(".finalTotalPrice_span").text(finalTotalPrice.toLocaleString());		
 	}

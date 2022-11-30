@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +22,7 @@
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/admin.css" rel="stylesheet">
 
-		<script type="text/javascript" >
+<script type="text/javascript">
 		
 			let result = <%= request.getParameter("result")%>	
 			
@@ -43,38 +43,32 @@
 
 	<!-- [시작] 상단 메뉴탭 -->
 	<nav
-		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
-		arial-label="Furni navigation bar">
+		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do">
-			<img src="resources/images/로고.png" alt="logo"></a>
+			<a class="navbar-brand" href="index.do"> <img src="resources/images/로고.png" alt="logo"></a>
 
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-				aria-controls="navbarsFurni" aria-expanded="false"
-				aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의
-							이야기(소개)</a></li>
+					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
 					<li class=""><a class="nav-link" href="shop.do">우리술 구경하기</a></li>
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li>
-	                  	<c:choose>
-	                  		<c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
-	                  		<c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
-	                  	</c:choose>
-	                </li>
+					<li><c:choose>
+							<c:when test="${empty sessionScope.member_id}">
+								<a class="nav-link" href="loginForm.do">들어가기(로그인)</a>
+							</c:when>
+							<c:when test="${not empty sessionScope.member_id}">
+								<a class="nav-link" href="logOut.do">나가기(로그아웃)</a>
+							</c:when>
+						</c:choose></li>
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
-					<li><a class="nav-link" href="cart.do"><img
-							src="resources/images/cart24.png"></a></li>
-					<li><a class="nav-link" href="myPage.do"><img
-							src="resources/images/user24.png"></a></li>
+					<li><a class="nav-link" href="cart.do"><img src="resources/images/cart24.png"></a></li>
+					<li><a class="nav-link" href="myPage.do"><img src="resources/images/user24.png"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -91,11 +85,15 @@
 	<div class="category">
 
 		<div class="category_gs">
-			<p><a href="goodsRegistration.do" class="ca">상품 등록 / 수정</a><p>
+			<p>
+				<a href="goodsRegistration.do" class="ca">상품 등록 / 수정</a>
+			<p>
 		</div>
 
 		<div class="category_gs">
-			<p><a href=".do" class="ca">재고 관리</a></p>
+			<p>
+				<a href=".do" class="ca">재고 관리</a>
+			</p>
 		</div>
 
 	</div>
@@ -148,9 +146,6 @@
 		</table>
 	</div>
 	<!-- 테이블 끝 -->
-
-
-
 
 
 </body>

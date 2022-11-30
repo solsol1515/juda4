@@ -20,6 +20,16 @@
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/admin.css" rel="stylesheet">
+
+<script type="text/javascript">
+	var admin_id = '<%=(String)session.getAttribute("admin_id")%>';
+	
+	if(admin_id == 'null') {
+		alert('로그인해야 이용할 수 있는 페이지입니다.');
+		location.href = "adminLogin.do";
+	}
+</script>
+
 <title>[ 상 품 등 록 ]</title>
 </head>
 
@@ -98,29 +108,22 @@
 	</div>
 	<!-- [끝] 상품 관리 카테고리 -->
 
-<form action="insertGoods.do" method="get">
+<form action="insertGoods.do" method="post">
 	<div class="goods-update">
 		<tr>
-<!-- 			<div> -->
-<!-- 				<td class="product-info"> -->
-<%-- 					<h5>[ 상품 사진 등록 ]</h5> <img src="resources/images/${img_file}" --%>
-<!-- 					alt="Image" class="img-fluid" name="img_file" -->
-<!-- 					style="width: 400px; height: 400px;" /> <br /> <input type="file" -->
-<!-- 					name='file' maxlength="60" size="40" onchange="setThumbnail(event);"> -->
-			
-<!-- 			</td> -->
-<!-- 			</div> -->
+			<div>
+				<td class="product-info">
+					<h5>[ 상품 사진 등록 ]</h5> <img src="resources/images/${img_file}" alt="Image" class="img-fluid" name="img_file" style="width: 400px; height: 400px;" /><br />
+					<input type="file" name='file' maxlength="60" size="40" onchange="setThumbnail(event);"/>
+				</td>
+			</div>
 
-<!-- 			<div> -->
-<!-- 				<td class="product-info"> -->
-<%-- 					<h5>[ 상품 상세 사진 등록 ]</h5> <img src="resources/images/${img_sangse}" --%>
-<!-- 					alt="Image" class="img-fluid" name="img_sangse" -->
-<!-- 					style="width: 400px; height: 400px;" /> <br /> <input type="file" -->
-<!-- 					name='file' maxlength="60" size="40"> -->
-<!-- 				</td> -->
-<!-- 			</div> -->
-
-
+			<div>
+				<td class="product-info">
+					<h5>[ 상품 상세 사진 등록 ]</h5> <img src="resources/images/${img_sangse}" alt="Image" class="img-fluid" name="img_sangse" style="width: 400px; height: 400px;"/><br />
+					<input type="file" name='file' maxlength="60" size="40">
+				</td>
+			</div>
 
 			<td>
 				<div
@@ -131,22 +134,22 @@
 						<ul class="updateMenu">
 							<li>제품번호&emsp;<input type="text" size="40" class="updm_"
 								name="goods_id" value="${goods_id}">${goods_id}</li>
-							<br />
+							<br/>
 							<li>제품명&emsp;&emsp;<input type="text" size="40"
 								class="updm_" name="goods_name" value="${goods_name}">${goods_name}</li>
-							<br />
+							<br/>
 							<li>가격&emsp;&emsp;&emsp;<input type="text" size="40"
 								class="updm_" name="price" value="${price}">${price}</li>
-							<br />
+							<br/>
 							<li>제품설명&emsp;<textarea type="text" class="updm"
 									name="description" rows="10" style="vertical-align: middle;" value="${price}">${price}</textarea></li>
-							<br />
+							<br/>
 							<li>도수&emsp;&emsp;&emsp;<input type="text" size="40"
 								class="updm_" name="alcohol" value="${alcohol}">${alcohol}</li>
-							<br />
+							<br/>
 							<li>양&emsp;&emsp;&emsp;&emsp;<input type="text" size="40"
 								class="updm_" name="volume" value="${volume}">${volume}</li>
-							<br />
+							<br/>
 							<li>원산지&emsp;&emsp;<input type="text" size="40"
 								class="updm_" name="origin" value="${origin}">${origin}</li>
 							<br />
@@ -157,12 +160,8 @@
 					</div>
 
 
-
-
-
 				</div>
 			</td>
-
 
 		</tr>
 	</div>

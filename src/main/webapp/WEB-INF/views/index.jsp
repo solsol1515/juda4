@@ -27,18 +27,11 @@
 <body>
 
 	<!-- [시작] 상단 메뉴탭 -->
-	<nav
-		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
-		arial-label="Furni navigation bar">
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do"> <img
-				src="resources/images/로고.png" alt="logo">
-			</a>
+			<a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo"></a>
 
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-				aria-controls="navbarsFurni" aria-expanded="false"
-				aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -174,15 +167,13 @@
 			<div class="row footer-content" align="center">
 				<div class="col-md-8" style="float: none; margin: 0 auto;">
 					<h6>
-						<br />
-						<br /> <strong>(주)전통주 프로젝트</strong>
+						<br /> <br /> <strong>(주)전통주 프로젝트</strong>
 					</h6>
 					<h7>사업자 번호 228-24-23029</h7>
 					<h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
 					<br />
 					<h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-					<h7>
-					<br />
+					<h7> <br />
 					<strong><b>고객센터</b></strong> </h7>
 					<h7>강원도 춘천시 퇴계로 89</h7>
 					<h7>전화 1588-8282</h7>
@@ -199,10 +190,6 @@
 	<!-- Start Footer Section -->
 	<footer class="footer-section">
 		<div class="container relative">
-
-			<div class="sofa-img">
-				<!-- <img src="images/sofa.png" alt="Image" class="img-fluid"> -->
-			</div>
 
 			<div class="border-top copyright">
 				<div class="row pt-3">
