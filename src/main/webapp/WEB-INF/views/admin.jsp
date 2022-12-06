@@ -16,7 +16,9 @@
 
 <!-- Bootstrap CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+	rel="stylesheet">
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/admin.css" rel="stylesheet">
@@ -26,17 +28,24 @@
 <body>
 
 	<!-- [시작] 상단 메뉴탭 -->
-	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+	<nav
+		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+		arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo"></a>
+			<a class="navbar-brand" href="index.do"><img
+				src="resources/images/로고.png" alt="logo"></a>
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의 이야기(소개)</a></li>
+					<li class="nav-item "><a class="nav-link" href="intro.do">우리들의
+							이야기(소개)</a></li>
 					<li class=""><a class="nav-link" href="shop.do">우리술 구경하기</a></li>
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
@@ -50,8 +59,10 @@
 							</c:when>
 						</c:choose></li>
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
-					<li><a class="nav-link" href="cart.do"><img src="resources/images/cart24.png"></a></li>
-					<li><a class="nav-link" href="myPage.do"><img src="resources/images/user24.png"></a></li>
+					<li><a class="nav-link" href="cart.do"><img
+							src="resources/images/cart24.png"></a></li>
+					<li><a class="nav-link" href="myPage.do"><img
+							src="resources/images/user24.png"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -69,9 +80,10 @@
 				<div class="col-6 col-md-6 col-lg-3 mb-4">
 					<div class="feature">
 						<div class="icon">
-							<a href=".do"><img src="resources/images/admin1.png" alt="Image" class="imf-fluid"></a>
+							<a href=".do"><img src="resources/images/admin1.png"
+								alt="Image" class="imf-fluid"></a>
 						</div>
-						<br/>
+						<br />
 						<h5>회원 관리</h5>
 					</div>
 				</div>
@@ -80,9 +92,10 @@
 				<div class="col-6 col-md-6 col-lg-3 mb-4">
 					<div class="feature">
 						<div class="icon">
-							<a href="goodsManagement.do"><img src="resources/images/admin2.png" alt="Image" class="imf-fluid"></a>
+							<a href="goodsManagement.do"><img
+								src="resources/images/admin2.png" alt="Image" class="imf-fluid"></a>
 						</div>
-						<br/>
+						<br />
 						<h5>상품 관리</h5>
 					</div>
 				</div>
@@ -91,7 +104,8 @@
 				<div class="col-6 col-md-6 col-lg-3 mb-4">
 					<div class="feature">
 						<div class="icon">
-							<a href="orderManagement.do"><img src="resources/images/admin3.png" alt="Image" class="imf-fluid"></a>
+							<a href="orderManagement.do"><img
+								src="resources/images/admin3.png" alt="Image" class="imf-fluid"></a>
 						</div>
 						<br />
 						<h5>주문 관리</h5>
@@ -102,7 +116,8 @@
 				<div class="col-6 col-md-6 col-lg-3 mb-4">
 					<div class="feature">
 						<div class="icon">
-							<a href=".do"><img src="resources/images/admin4.png" alt="Image" class="imf-fluid"></a>
+							<a href=".do"><img src="resources/images/admin4.png"
+								alt="Image" class="imf-fluid"></a>
 						</div>
 						<br />
 						<h5>게시판 관리</h5>
@@ -113,7 +128,8 @@
 				<div class="col-6 col-md-6 col-lg-3 mb-4">
 					<div class="feature">
 						<div class="icon">
-							<a href=".do"><img src="resources/images/admin5.png" alt="Image" class="imf-fluid"></a>
+							<a href=".do"><img src="resources/images/admin5.png"
+								alt="Image" class="imf-fluid"></a>
 						</div>
 						<br />
 						<h5>통계 관리</h5>

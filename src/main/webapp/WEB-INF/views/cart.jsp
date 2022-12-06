@@ -17,16 +17,18 @@
 
 <!-- Bootstrap CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+	rel="stylesheet">
 <link href="resources/css/tiny-slider.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/cart.css" rel="stylesheet">
 <title>장바구니</title>
 
 <script type="text/javascript">
-	var member_id = '<%=(String)session.getAttribute("member_id")%>';
-	
-	if(member_id == 'null') {
+	var member_id = '<%=(String) session.getAttribute("member_id")%>';
+
+	if (member_id == 'null') {
 		alert('로그인해야 이용할 수 있는 페이지입니다.');
 		location.href = "loginForm.do";
 	}
@@ -41,7 +43,9 @@
 		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
 		arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo" style="width: 200px; height: 100px;"></a>
+			<a class="navbar-brand" href="index.do"><img
+				src="resources/images/로고.png" alt="logo"
+				style="width: 200px; height: 100px;"></a>
 
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
@@ -205,15 +209,13 @@
 			<div class="row footer-content" align="center">
 				<div class="col-md-8" style="float: none; margin: 0 auto;">
 					<h6>
-						<br />
-						<br /> <strong>(주)전통주 프로젝트</strong>
+						<br /> <br /> <strong>(주)전통주 프로젝트</strong>
 					</h6>
 					<h7>사업자 번호 228-24-23029</h7>
 					<h7>대표이사 코스모 | 서울 금천구 가산디지털2로 101</h7>
 					<br />
 					<h7>전화 02-2025-8523 | 이메일 swkosmo@daum.net</h7>
-					<h7>
-					<br />
+					<h7> <br />
 					<strong><b>고객센터</b></strong> </h7>
 					<h7>강원도 춘천시 퇴계로 89</h7>
 					<h7>전화 1588-8282</h7>
@@ -240,7 +242,9 @@
 					<div class="col-lg-6">
 						<p class="mb-2 text-center text-lg-start">
 							Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
 							. All Rights Reserved. &mdash; Designed with love by <a
 								href="https://untree.co">Untree.co</a>
 							<!-- License information: https://untree.co/license/ -->

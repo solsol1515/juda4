@@ -27,11 +27,17 @@
 <body>
 
 	<!-- [시작] 상단 메뉴탭 -->
-	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+	<nav
+		class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+		arial-label="Furni navigation bar">
 		<div class="container">
-			<a class="navbar-brand" href="index.do"><img src="resources/images/로고.png" alt="logo"></a>
+			<a class="navbar-brand" href="index.do"><img
+				src="resources/images/로고.png" alt="logo"></a>
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -196,7 +202,9 @@
 					<div class="col-lg-6">
 						<p class="mb-2 text-center text-lg-start">
 							Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script>
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
 							. All Rights Reserved. &mdash; Designed with love by <a
 								href="https://untree.co">Untree.co</a>
 							<!-- License information: https://untree.co/license/ -->

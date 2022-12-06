@@ -32,12 +32,6 @@ $('#addr_btn').click(function(){
 // [결제창] 배송지정보 값 입력
 $('#payForm input[name="o_sum"]').val($('._totalPayPrice:eq(0)').text());
 
-
-/* [결제창] 결제수단 라디오버튼 (계좌이체, 카드결제)
-	$("input:radio[name='pay']:radio[value='계좌이체']").prop('checked', true); // 선택하기
-	$("input:radio[name='pay']:radio[value='카드결제']").prop('checked', false); // 해제하기
-*/
-
 // ===============================================================================
 
 // ==== 금액 계산 =====
@@ -90,14 +84,14 @@ $('#payForm input[name="o_sum"]').val($('._totalPayPrice:eq(0)').text());
 		
 		// 배송지 정보
 		param += "&delivery_name=" + $('#delivery_name').val();		// 배송지 이름
-		param += "&receiver=" + $('#receiver').val();				// 수령인
-		param += "&p_num1=" + $('#p_num1').val();					// p_num1
-		param += "&p_num2=" + $('#p_num2').val();					// p_num2
-		param += "&p_num3=" + $('#p_num3').val();					// p_num3
-		param += "&postcode=" + $('#postcode').val();				// 우편번호
-		param += "&addr=" + $('#addr').val();						// 주소
-		param += "&addr_detail=" + $('#addr_detail').val();			// 상세주소
-		param += "&delivery_memo=" + $('#delivery_memo').val();		// 배송 메모
+		param += "&receiver=" + $('#receiver').val();							// 수령인
+		param += "&p_num1=" + $('#p_num1').val();							// p_num1
+		param += "&p_num2=" + $('#p_num2').val();							// p_num2
+		param += "&p_num3=" + $('#p_num3').val();							// p_num3
+		param += "&postcode=" + $('#postcode').val();						// 우편번호
+		param += "&addr=" + $('#addr').val();										// 주소
+		param += "&addr_detail=" + $('#addr_detail').val();					// 상세주소
+		param += "&delivery_memo=" + $('#delivery_memo').val();	// 배송 메모
 		
 		// alert(param);
 		

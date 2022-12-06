@@ -99,7 +99,6 @@
    </div>
    <!-- [끝] 상품 관리 카테고리 -->
 
-
 	<div class="goods-update">
 		<tr>
 			<td class="product-info"><img src="resources/images/${img_file}"
@@ -117,20 +116,6 @@
 					</div>
 
 				</div>
-				
-<!-- 				<div -->
-<!-- 					class="input-group mb-3 d-flex align-items-center quantity-container" -->
-<!-- 					style="max-width: 350px;"> -->
-
-<!-- 					<div class=""> -->
-<%-- 						<p>${goods_name}</p> --%>
-<%-- 						<p>${price}원</p> --%>
-<%-- 						<p>${description}</p> --%>
-<!-- 					</div> -->
-
-<!-- 				</div> -->
-				
-				
 				
 			</td>
 			<!--   수정 버튼-->

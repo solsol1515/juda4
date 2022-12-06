@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -48,12 +48,14 @@
 					<li><a class="nav-link" href="community.do">우리들의 공간</a></li>
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li>
-			          <c:choose>
-				          <c:when test="${empty sessionScope.member_id}"><a class="nav-link" href="loginForm.do">들어가기(로그인)</a></c:when>
-				          <c:when test="${not empty sessionScope.member_id}"><a class="nav-link" href="logOut.do">나가기(로그아웃)</a></c:when>
-			          </c:choose>
-		          	</li>
+					<li><c:choose>
+							<c:when test="${empty sessionScope.member_id}">
+								<a class="nav-link" href="loginForm.do">들어가기(로그인)</a>
+							</c:when>
+							<c:when test="${not empty sessionScope.member_id}">
+								<a class="nav-link" href="logOut.do">나가기(로그아웃)</a>
+							</c:when>
+						</c:choose></li>
 					<li><a class="nav-link" href="join.do">함께하기(회원가입)</a></li>
 					<li><a class="nav-link" href="cart.do"><img
 							src="resources/images/cart24.png"></a></li>
@@ -64,8 +66,8 @@
 		</div>
 
 	</nav>
-	<br/>
-	<br/>
+	<br />
+	<br />
 	<!-- [끝] 상단 메뉴탭 -->
 
 
@@ -75,34 +77,35 @@
 		<h3>관리자 모드</h3>
 	</div>
 
-	 <!-- [시작] 상품 관리 카테고리 -->
-   <div class="category">
+	<!-- [시작] 상품 관리 카테고리 -->
+	<div class="category">
 
-      <div class="category_gs">
-         <p>
-            <a href="goodsRegistration.do" class="ca">상품 등록</a>
-         <p>
-      </div>
+		<div class="category_gs">
+			<p>
+				<a href="goodsRegistration.do" class="ca">상품 등록</a>
+			<p>
+		</div>
 
-      <div class="category_gs">
-         <p>
-            <a href="goodsUpdate1.do" class="ca">상품 수정</a>
-         <p>
-      </div>
-      
-      <div class="category_gs">
-         <p>
-            <a href="selectStock.do" class="ca">재고 관리</a>
-         </p>
-      </div>
+		<div class="category_gs">
+			<p>
+				<a href="goodsUpdate1.do" class="ca">상품 수정</a>
+			<p>
+		</div>
 
-   </div>
-   <!-- [끝] 상품 관리 카테고리 -->
+		<div class="category_gs">
+			<p>
+				<a href="selectStock.do" class="ca">재고 관리</a>
+			</p>
+		</div>
+
+	</div>
+	<!-- [끝] 상품 관리 카테고리 -->
 
 	<!-- 저장 버튼 -->
 	<div class="save">
-<!-- 		<input type="button" class="save_btn" value="저 장"> -->
+		<!-- 		<input type="button" class="save_btn" value="저 장"> -->
 		<button class="save_btn" onclick="save_btn()">저장</button>
+
 		<script>
 						function save_btn() {
 							alert("저장되었습니다.");
@@ -114,34 +117,40 @@
 
 	<!-- 테이블 시작 -->
 	<form action="selectStock" method="get">
-	<div>
-		<table class="stock">
-			<tr>
-				<th scope="row">재고기록번호</th>
-				<th scope="row">상품번호</th>
-				<th scope="row">출고예정</th>
-				<th scope="row">입고예정</th>
-				<th scope="row">실입고</th>
-				<th scope="row">실출고</th>
-			</tr>
+		<div>
+			<table class="stock">
+				<tr>
+					<th scope="row">재고기록번호</th>
+					<th scope="row">상품번호</th>
+					<th scope="row">출고예정</th>
+					<th scope="row">입고예정</th>
+					<th scope="row">실입고</th>
+					<th scope="row">실출고</th>
+				</tr>
 
-			<tr>
-				
-			</tr>
+				<tr>
 
-<c:forEach items="${stockList}" var="vo">
-			<tr>
-				<td><input type="text" class="stock_" value="${vo.stock_id}" readonly></td>
-				<td><input type="text" class="stock_" value="${vo.goods_id}" readonly></td>
-				<td><input type="text" class="stock_" value="${vo.expected_release}"></td>
-				<td><input type="text" class="stock_" value="${vo.expected_stock}"></td>
-				<td><input type="text" class="stock_" value="${vo.actual_release}"></td>
-				<td><input type="text" class="stock_" value="${vo.actual_stock}"></td>
-			</tr>
-</c:forEach>
-		
-		</table>
-	</div>
+				</tr>
+
+				<c:forEach items="${stockList}" var="vo">
+					<tr>
+						<td><input type="text" class="stock_" value="${vo.stock_id}"
+							readonly></td>
+						<td><input type="text" class="stock_" value="${vo.goods_id}"
+							readonly></td>
+						<td><input type="text" class="stock_"
+							value="${vo.expected_release}"></td>
+						<td><input type="text" class="stock_"
+							value="${vo.expected_stock}"></td>
+						<td><input type="text" class="stock_"
+							value="${vo.actual_release}"></td>
+						<td><input type="text" class="stock_"
+							value="${vo.actual_stock}"></td>
+					</tr>
+				</c:forEach>
+
+			</table>
+		</div>
 	</form>
 	<!-- 테이블 끝 -->
 
