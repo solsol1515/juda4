@@ -25,7 +25,6 @@ public class JudaServiceImpl implements JudaService {
 	
 	@Autowired
 	private JudaDAO judaDAO;
-	
 	   /* [ 메인 ] 주간 순위 */
 	   public List<RankVO> selectRank () {
 	      return judaDAO.selectRank();

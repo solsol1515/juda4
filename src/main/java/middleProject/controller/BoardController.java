@@ -21,9 +21,11 @@ public class BoardController {
    @Autowired
    private BoardService boardService;
 
-   // 목록보기
-   @RequestMapping("community.do") 
+   
+   @RequestMapping("community.do") // 목록보기
    public void getBoardList(String searchCondition, String searchKeyword, Model m) {
+      System.out.println("searchCondition: " + searchCondition);
+      System.out.println("searchKeyword: " + searchKeyword);
       
       HashMap map = new HashMap();
       map.put("searchCondition", searchCondition);
@@ -33,26 +35,29 @@ public class BoardController {
       m.addAttribute("boardList", list);
    } // end of getBoardList
    
-   	// 새글쓰기
-   @RequestMapping("createBoard.do") 
+   
+   @RequestMapping("createBoard.do") // 새글쓰기
    public String insertBoard(BoardVO vo, HttpSession session) {
 	   Integer result = boardService.insertBoard(vo);
 	   return "redirect:community.do?result=" + result;
    } // end of insertBoard
    
-   // 저장하기 
-   @RequestMapping("saveBoard.do")
+   
+   @RequestMapping("saveBoard.do") // 저장하기
    public String saveBoard(BoardVO boardVO){
 	 //  System.out.println(boardVO.getContent());
 	   boardService.insertBoard(boardVO);
 	return "redirect:community.do";
    } // end of saveBoard
    
-   // 작성한 글 보기
-   @RequestMapping("getBoard.do") 
-   public void getBoard(BoardVO boardVO, Model m) { 
+   
+   @RequestMapping("getBoard.do") // 작성한 글 보기
+   public void getBoard(BoardVO boardVO, Model m) { // 데이터 넘겨주기 위해서 Model m 사용
 	   boardService.updateView_count(boardVO.getQ_id());
 	   m.addAttribute("board", boardService.getBoard(boardVO));
+	   
+//		 BoardVO resultVO = boardService.getBoard(boardVO); m.addAttribute("board", resultVO);
+		
    } // end of getBoard 
    
    

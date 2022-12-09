@@ -21,6 +21,7 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	public void updateBoard(BoardVO vo) {
+		System.out.println("===> Mybatis updateBoard() 호출");
 		mybatis.update("Board.updateBoard", vo);
 	}
 

@@ -55,7 +55,7 @@ public class JudaController {
 		vo.setBirth(vo.getYy()+"-"+vo.getMm()+"-"+vo.getDd());
 		
 		m.addAttribute("result", judaService.insertMember(vo));
-		m.addAttribute("member_id", vo.getMember_id()); 
+		m.addAttribute("member_id", vo.getMember_id()); // ## 한 줄 추가한 거 맞는지 확인 !!! 회원가입 축하할 때 아이디 명시하기 위해서
 	}
 	
  // =======================================================	
@@ -155,19 +155,19 @@ public class JudaController {
   	}
   	
   	// 상세 페이지에서 바로 결제할 때 뜨는 결제창
-	/*
-	 * @RequestMapping("payOne.do") public String getPayOne(Integer amount,
-	 * HttpSession session, Model m) { String md =
-	 * (String)session.getAttribute("member_id"); CartVO vo =
-	 * judaService.getPayOne(md); vo.setC_amount(amount);
-	 * m.addAttribute("payItemList", vo); m.addAttribute("member",
-	 * judaService.getMember(md)); return "pay"; }
-	 */
+   	@RequestMapping("payOne.do")
+   	public String getPayOne(Integer amount, HttpSession session, Model m) {
+   		String md = (String)session.getAttribute("member_id");
+   		CartVO vo = judaService.getPayOne(md);
+   		vo.setC_amount(amount);
+  		m.addAttribute("payItemList", vo);
+  		m.addAttribute("member", judaService.getMember(md));
+   		return "pay";
+   	}
    	
 	// 구매하기
 	@RequestMapping("pay.do")
-	public String insertPay(PayListVO plVO, Integer[] goods_id, Integer[] c_amount, HttpSession session) 
-																							throws UnsupportedEncodingException {
+	public String insertPay(PayListVO plVO, Integer[] goods_id, Integer[] c_amount, HttpSession session) throws UnsupportedEncodingException {
 		
 		// 세션 아이디를 변수에 넣기
 		String id = (String)session.getAttribute("member_id");
@@ -207,6 +207,7 @@ public class JudaController {
 		// 해당 아이디의 카트를 비우기 (결제한 것만)
 		judaService.deletePayCart(vo);
 		
+		byte[] name = "전체".getBytes("utf-8");
 		String name2 = URLEncoder.encode("전체", "UTF-8");
 		
 		return "redirect:/shop.do?goods_type=" + name2 + "&goods_sort=like_count DESC";
